@@ -1,12 +1,4 @@
 print "Made By Mrgunz#2289"
-print "P To Hide/Show"
-game.StarterGui:SetCore("SendNotification", {
-	Title = "Robber Menu";
-	Text = "P To Hide/Show";
-	Duration = 5;
-})
-
-wait(2)
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Robber Menu Loading";
 	Text = "Made By Mrgunz#2289";
@@ -97,6 +89,13 @@ game.StarterGui:SetCore("SendNotification", {
 	Duration = 30;
 })
 
+bc = BrickColor.new("White")
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+	Text = "P Hide/Show";
+	Font = Enum.Font.SourceSans;
+	Color = bc.Color;
+	FontSize = Enum.FontSize.Size9;
+	})
 
 RobberMenuv4.Name = "Robber Menu v4"
 RobberMenuv4.Parent = game.CoreGui
@@ -1366,6 +1365,15 @@ DeleteMenuButton.Text = "Delete Menu"
 DeleteMenuButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 DeleteMenuButton.TextSize = 20.000
 DeleteMenuButton.MouseButton1Down:connect(function()
+bc = BrickColor.new("White")
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+	Text = "Removing Robber Menu";
+	Font = Enum.Font.SourceSans;
+	Color = bc.Color;
+	FontSize = Enum.FontSize.Size9;
+	})
+	
+wait(2)
 	game:GetService("CoreGui")["Robber Menu v4"]:Destroy()
 end)
 
