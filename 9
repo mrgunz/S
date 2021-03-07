@@ -1,4 +1,13 @@
+
+
+for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
+	if v.Name == "Robber Menu" then
+		v:Destroy()
+	end
+end
+
 print "Made By Mrgunz#2289"
+print("Loading.")
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Robber Menu Loading";
 	Text = "Made By Mrgunz#2289";
@@ -7,50 +16,24 @@ game.StarterGui:SetCore("SendNotification", {
 
 
 
-local RobberMenuv4 = Instance.new("ScreenGui")
-local MainMenu = Instance.new("Frame")
-local _2ndFrame = Instance.new("Frame")
-local RobberMenuLabel = Instance.new("TextLabel")
-local BreakServer = Instance.new("TextButton")
-local ChatSpy = Instance.new("TextButton")
-local GetKey = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-local HackComputers = Instance.new("TextButton")
-local Cloak = Instance.new("TextButton")
-local FEPlaySounds = Instance.new("TextButton")
-local UnlockArmoury = Instance.new("TextButton")
-local SilentAim = Instance.new("TextButton")
-local DoObjective = Instance.new("TextButton")
-local Esp = Instance.new("TextButton")
-local NoPower = Instance.new("TextButton")
-local SpotRobber = Instance.new("TextButton")
-local UI1 = Instance.new("TextLabel")
-local SettingsIcon = Instance.new("ImageButton")
-local LightIcon = Instance.new("ImageButton")
-local GunIcon = Instance.new("ImageButton")
-local LoopIcon = Instance.new("ImageButton")
+
+local RobberMenu = Instance.new("ScreenGui")
 local Settings = Instance.new("Frame")
 local SettingsFrame = Instance.new("Frame")
 local SettingsLabel = Instance.new("TextLabel")
 local DeleteMenuButton = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
 local Label = Instance.new("TextLabel")
 local Label_2 = Instance.new("TextLabel")
 local Label_3 = Instance.new("TextLabel")
 local Label_4 = Instance.new("TextLabel")
+local PShowHideLabel = Instance.new("TextLabel")
 local UI2 = Instance.new("TextLabel")
 local CloseSettings = Instance.new("TextButton")
-local LoopMenu = Instance.new("Frame")
-local LoopFrame = Instance.new("Frame")
-local LoopStuffLabel = Instance.new("TextLabel")
-local LoopGetKeyLStops = Instance.new("TextButton")
-local LoopCloakLStops = Instance.new("TextButton")
-local LoopHackComputerLStops = Instance.new("TextButton")
-local LoopNoPowerLStops = Instance.new("TextButton")
-local LoopUnlockArmouryLStops = Instance.new("TextButton")
-local LoopSpotRobberLStops = Instance.new("TextButton")
-local UI3 = Instance.new("TextLabel")
-local CloseLoopMenu = Instance.new("TextButton")
+local UIv3 = Instance.new("TextLabel")
+local UIv4 = Instance.new("TextLabel")
+local UIv5 = Instance.new("TextLabel")
+local UIv6 = Instance.new("TextLabel")
 local GunMenu = Instance.new("Frame")
 local GunMenuFrame = Instance.new("Frame")
 local UI4 = Instance.new("TextLabel")
@@ -68,6 +51,11 @@ local ModFirerate = Instance.new("TextButton")
 local ModRange = Instance.new("TextButton")
 local ModReloadTime = Instance.new("TextButton")
 local ModStoredAmmo = Instance.new("TextButton")
+local SuperShotgun = Instance.new("TextButton")
+local UIv6_2 = Instance.new("TextLabel")
+local UIv7 = Instance.new("TextLabel")
+local UIv8 = Instance.new("TextLabel")
+local UIv9 = Instance.new("TextLabel")
 local LightMenu = Instance.new("Frame")
 local LightFrame = Instance.new("Frame")
 local LightMenuLabel = Instance.new("TextLabel")
@@ -80,41 +68,1328 @@ local BackroomLight = Instance.new("TextButton")
 local DownstairsLight = Instance.new("TextButton")
 local UI5 = Instance.new("TextLabel")
 local CloseLightMenu = Instance.new("TextButton")
+local UIv6_3 = Instance.new("TextLabel")
+local UIv7_2 = Instance.new("TextLabel")
+local UIv8_2 = Instance.new("TextLabel")
+local UIv9_2 = Instance.new("TextLabel")
+local LoopMenu = Instance.new("Frame")
+local LoopFrame = Instance.new("Frame")
+local LoopStuffLabel = Instance.new("TextLabel")
+local LoopGetKeyLStops = Instance.new("TextButton")
+local LoopCloakLStops = Instance.new("TextButton")
+local LoopHackComputerLStops = Instance.new("TextButton")
+local LoopNoPowerLStops = Instance.new("TextButton")
+local LoopUnlockArmouryLStops = Instance.new("TextButton")
+local LoopSpotRobberLStops = Instance.new("TextButton")
+local UI3 = Instance.new("TextLabel")
+local CloseLoopMenu = Instance.new("TextButton")
+local UIv4_2 = Instance.new("TextLabel")
+local UIv5_2 = Instance.new("TextLabel")
+local UIv6_4 = Instance.new("TextLabel")
+local UIv7_3 = Instance.new("TextLabel")
+local MainMenu = Instance.new("Frame")
+local _2ndFrame = Instance.new("Frame")
+local RobberMenuLabel = Instance.new("TextLabel")
+local BreakServer = Instance.new("TextButton")
+local ChatSpy = Instance.new("TextButton")
+local GetKey = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local HackComputers = Instance.new("TextButton")
+local Cloak = Instance.new("TextButton")
+local FEPlaySounds = Instance.new("TextButton")
+local UnlockArmoury = Instance.new("TextButton")
+local SilentAim = Instance.new("TextButton")
+local DoObjective = Instance.new("TextButton")
+local Esp = Instance.new("TextButton")
+local NoPower = Instance.new("TextButton")
+local SpotRobber = Instance.new("TextButton")
+local UI1 = Instance.new("TextLabel")
+local SettingsIcon = Instance.new("ImageButton")
+local LightIcon = Instance.new("ImageButton")
+local GunIcon = Instance.new("ImageButton")
+local LoopIcon = Instance.new("ImageButton")
+local UIv2 = Instance.new("TextLabel")
+local UIv3_2 = Instance.new("TextLabel")
+local UIv4_3 = Instance.new("TextLabel")
+local UIv5_3 = Instance.new("TextLabel")
 
-
-wait(6)
+wait(3)
 game.StarterGui:SetCore("SendNotification", {
-	Title = "Robber Menu Loaded";
+	Title = "Robber Menu Loaded.";
 	Text = "Made By Mrgunz#2289";
 	Duration = 30;
 })
 
 bc = BrickColor.new("White")
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
-	Text = "P Hide/Show";
+	Text = "[Mrgunz#2289]: P Hide/Show";
 	Font = Enum.Font.SourceSans;
 	Color = bc.Color;
 	FontSize = Enum.FontSize.Size9;
-	})
+})
 
-RobberMenuv4.Name = "Robber Menu v4"
-RobberMenuv4.Parent = game.CoreGui
 
-MainMenu.Name = "Main Menu"
-MainMenu.Parent = RobberMenuv4
-MainMenu.Active = true
-MainMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-MainMenu.BorderSizePixel = 0
-MainMenu.Position = UDim2.new(0.00672782958, 0, 0.371359229, 0)
-MainMenu.Size = UDim2.new(0, 477, 0, 321)
-MainMenu.Draggable = true
+RobberMenu.Name = "Robber Menu"
+RobberMenu.Parent = game.CoreGui
+
 game:GetService("UserInputService").InputBegan:connect(function(input, gameProcessed)
 	if input.KeyCode == Enum.KeyCode.P then
 		if not gameProcessed then
-			RobberMenuv4.Enabled = not RobberMenuv4.Enabled
+			RobberMenu.Enabled = not RobberMenu.Enabled
 		end
 	end
 end)
+
+
+
+
+
+Settings.Name = "Settings"
+Settings.Parent = RobberMenu
+Settings.Active = true
+Settings.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.101529039, 0, 0.385922343, 0)
+Settings.Size = UDim2.new(0, 326, 0, 321)
+Settings.Visible = false
+Settings.Draggable = true
+
+SettingsFrame.Name = "Settings Frame"
+SettingsFrame.Parent = Settings
+SettingsFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+SettingsFrame.BorderSizePixel = 0
+SettingsFrame.Position = UDim2.new(0.0276073627, 0, 0.0311526489, 0)
+SettingsFrame.Size = UDim2.new(0, 309, 0, 301)
+
+SettingsLabel.Name = "Settings Label"
+SettingsLabel.Parent = SettingsFrame
+SettingsLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+SettingsLabel.BorderSizePixel = 0
+SettingsLabel.Position = UDim2.new(-0.0291262139, 0, 0.0431893691, 0)
+SettingsLabel.Size = UDim2.new(0, 326, 0, 34)
+SettingsLabel.Font = Enum.Font.SourceSans
+SettingsLabel.Text = "Settings"
+SettingsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsLabel.TextSize = 27.000
+
+DeleteMenuButton.Name = "Delete Menu Button"
+DeleteMenuButton.Parent = SettingsFrame
+DeleteMenuButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+DeleteMenuButton.BorderSizePixel = 0
+DeleteMenuButton.Position = UDim2.new(0.030123556, 0, 0.816706479, 0)
+DeleteMenuButton.Size = UDim2.new(0, 117, 0, 32)
+DeleteMenuButton.Font = Enum.Font.SourceSans
+DeleteMenuButton.Text = "Delete Menu"
+DeleteMenuButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+DeleteMenuButton.TextSize = 20.000
+DeleteMenuButton.MouseButton1Down:connect(function()
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "Removing Robber Menu";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+
+	wait()
+	game:GetService("CoreGui")["Robber Menu"]:Destroy()
+end)
+
+TextLabel.Parent = SettingsFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.848436952, 0, 0.923588037, 0)
+TextLabel.Size = UDim2.new(0, 46, 0, 23)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "v6"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 15.000
+
+Label.Name = "Label"
+Label.Parent = SettingsFrame
+Label.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Label.BorderSizePixel = 0
+Label.Position = UDim2.new(0.0291262139, 0, 0.196013287, 0)
+Label.Size = UDim2.new(0, 281, 0, 34)
+Label.Font = Enum.Font.SourceSans
+Label.Text = "UI By Mrgunz#2289"
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextSize = 15.000
+
+Label_2.Name = "Label"
+Label_2.Parent = SettingsFrame
+Label_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Label_2.BorderSizePixel = 0
+Label_2.Position = UDim2.new(0.0291262139, 0, 0.308970094, 0)
+Label_2.Size = UDim2.new(0, 281, 0, 34)
+Label_2.Font = Enum.Font.SourceSans
+Label_2.Text = "Scripts By Mrgunz#2289"
+Label_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label_2.TextSize = 15.000
+
+Label_3.Name = "Label"
+Label_3.Parent = SettingsFrame
+Label_3.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Label_3.BorderSizePixel = 0
+Label_3.Position = UDim2.new(0.0291262139, 0, 0.441860437, 0)
+Label_3.Size = UDim2.new(0, 281, 0, 34)
+Label_3.Font = Enum.Font.SourceSans
+Label_3.Text = "Silent Aim Not Mine"
+Label_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label_3.TextSize = 15.000
+
+Label_4.Name = "Label"
+Label_4.Parent = SettingsFrame
+Label_4.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Label_4.BorderSizePixel = 0
+Label_4.Position = UDim2.new(0.0291262139, 0, 0.578073025, 0)
+Label_4.Size = UDim2.new(0, 281, 0, 34)
+Label_4.Font = Enum.Font.SourceSans
+Label_4.Text = "ESP Not Mine"
+Label_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label_4.TextSize = 15.000
+
+PShowHideLabel.Name = "P Show/Hide Label"
+PShowHideLabel.Parent = SettingsFrame
+PShowHideLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+PShowHideLabel.BorderSizePixel = 0
+PShowHideLabel.Position = UDim2.new(0.511326849, 0, 0.830564737, 0)
+PShowHideLabel.Size = UDim2.new(0, 139, 0, 23)
+PShowHideLabel.Font = Enum.Font.SourceSans
+PShowHideLabel.Text = "P Show/Hide"
+PShowHideLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+PShowHideLabel.TextSize = 15.000
+
+UI2.Name = "UI 2"
+UI2.Parent = Settings
+UI2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+UI2.BorderSizePixel = 0
+UI2.Position = UDim2.new(0, 0, 0.0311526489, 0)
+UI2.Size = UDim2.new(0, 325, 0, 13)
+UI2.Font = Enum.Font.SourceSans
+UI2.Text = ""
+UI2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UI2.TextSize = 14.000
+
+CloseSettings.Name = "Close Settings"
+CloseSettings.Parent = Settings
+CloseSettings.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CloseSettings.BorderSizePixel = 0
+CloseSettings.Position = UDim2.new(0.91724807, 0, 0, 0)
+CloseSettings.Size = UDim2.new(0, 26, 0, 30)
+CloseSettings.Font = Enum.Font.SourceSans
+CloseSettings.Text = "X"
+CloseSettings.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseSettings.TextSize = 28.000
+CloseSettings.MouseButton1Down:connect(function()
+	Settings.Visible = false
+	MainMenu.Visible = true
+end)
+
+UIv3.Name = "UI v3"
+UIv3.Parent = Settings
+UIv3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv3.BorderSizePixel = 0
+UIv3.Position = UDim2.new(0.993710756, 0, -1.42605501e-07, 0)
+UIv3.Size = UDim2.new(0, 3, 0, 321)
+UIv3.Font = Enum.Font.SourceSans
+UIv3.Text = ""
+UIv3.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv3.TextSize = 14.000
+
+UIv4.Name = "UI v4"
+UIv4.Parent = Settings
+UIv4.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv4.BorderSizePixel = 0
+UIv4.Position = UDim2.new(-0.000154256821, 0, -1.42492354e-07, 0)
+UIv4.Size = UDim2.new(0, 3, 0, 321)
+UIv4.Font = Enum.Font.SourceSans
+UIv4.Text = ""
+UIv4.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv4.TextSize = 14.000
+
+UIv5.Name = "UI v5"
+UIv5.Parent = Settings
+UIv5.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv5.BorderSizePixel = 0
+UIv5.Position = UDim2.new(0.00904818065, 0, 0.990076363, 0)
+UIv5.Size = UDim2.new(0, 322, 0, 3)
+UIv5.Font = Enum.Font.SourceSans
+UIv5.Text = ""
+UIv5.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv5.TextSize = 14.000
+
+UIv6.Name = "UI v6"
+UIv6.Parent = Settings
+UIv6.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv6.BorderSizePixel = 0
+UIv6.Position = UDim2.new(-0.000154272915, 0, -0.00992362853, 0)
+UIv6.Size = UDim2.new(0, 327, 0, 3)
+UIv6.Font = Enum.Font.SourceSans
+UIv6.Text = ""
+UIv6.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv6.TextSize = 14.000
+
+GunMenu.Name = "Gun Menu"
+GunMenu.Parent = RobberMenu
+GunMenu.Active = true
+GunMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GunMenu.BorderSizePixel = 0
+GunMenu.Position = UDim2.new(0.00550459046, 0, 0.418689281, 0)
+GunMenu.Size = UDim2.new(0, 477, 0, 321)
+GunMenu.Visible = false
+GunMenu.Draggable = true
+
+GunMenuFrame.Name = "Gun Menu Frame"
+GunMenuFrame.Parent = GunMenu
+GunMenuFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+GunMenuFrame.BorderSizePixel = 0
+GunMenuFrame.Position = UDim2.new(0.0294600651, 0, 0.0342679136, 0)
+GunMenuFrame.Size = UDim2.new(0, 449, 0, 300)
+
+UI4.Name = "UI 4"
+UI4.Parent = GunMenuFrame
+UI4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+UI4.BorderSizePixel = 0
+UI4.Position = UDim2.new(-0.0291263442, 0, -0.000917256693, 0)
+UI4.Size = UDim2.new(0, 476, 0, 14)
+UI4.Font = Enum.Font.SourceSans
+UI4.Text = ""
+UI4.TextColor3 = Color3.fromRGB(0, 0, 0)
+UI4.TextSize = 14.000
+
+GunMenuLabel.Name = "Gun Menu Label"
+GunMenuLabel.Parent = GunMenuFrame
+GunMenuLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GunMenuLabel.BorderSizePixel = 0
+GunMenuLabel.Position = UDim2.new(-0.0291263442, 0, 0.0431893915, 0)
+GunMenuLabel.Size = UDim2.new(0, 476, 0, 34)
+GunMenuLabel.Font = Enum.Font.SourceSans
+GunMenuLabel.Text = "Gun Menu"
+GunMenuLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+GunMenuLabel.TextSize = 27.000
+
+CloseGunMenu.Name = "Close Gun Menu"
+CloseGunMenu.Parent = GunMenuFrame
+CloseGunMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CloseGunMenu.BorderSizePixel = 0
+CloseGunMenu.Position = UDim2.new(0.969333649, 0, -0.0299999975, 0)
+CloseGunMenu.Size = UDim2.new(0, 26, 0, 30)
+CloseGunMenu.Font = Enum.Font.SourceSans
+CloseGunMenu.Text = "X"
+CloseGunMenu.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseGunMenu.TextSize = 28.000
+CloseGunMenu.MouseButton1Down:connect(function()
+	GunMenu.Visible = false
+	MainMenu.Visible = true
+end)
+
+NoRecoil.Name = "No Recoil"
+NoRecoil.Parent = GunMenuFrame
+NoRecoil.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+NoRecoil.BorderSizePixel = 0
+NoRecoil.Position = UDim2.new(0.365504831, 0, 0.251900405, 0)
+NoRecoil.Size = UDim2.new(0, 117, 0, 32)
+NoRecoil.Font = Enum.Font.SourceSans
+NoRecoil.Text = "No Recoil"
+NoRecoil.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoRecoil.TextSize = 16.000
+NoRecoil.MouseButton1Down:connect(function()
+
+	game:GetService("ReplicatedStorage").Weapons.G17.Recoil:Destroy()
+	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].Recoil:Destroy()
+	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].Recoil:Destroy()
+	game:GetService("ReplicatedStorage").Weapons.M4A1.Recoil:Destroy()
+	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Recoil:Destroy()
+	game:GetService("ReplicatedStorage").Weapons["MAC-10"].Recoil:Destroy()
+	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].Recoil:Destroy()
+	game:GetService("ReplicatedStorage").Weapons.MP5.Recoil:Destroy()
+	game:GetService("ReplicatedStorage").Weapons.M1911.Recoil:Destroy()
+
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "[Mrgunz#2289]: No Recoil.";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+end)
+
+NoSpread.Name = "No Spread"
+NoSpread.Parent = GunMenuFrame
+NoSpread.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+NoSpread.BorderSizePixel = 0
+NoSpread.Position = UDim2.new(0.364359409, 0, 0.38856709, 0)
+NoSpread.Size = UDim2.new(0, 117, 0, 30)
+NoSpread.Font = Enum.Font.SourceSans
+NoSpread.Text = "No Spread"
+NoSpread.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoSpread.TextSize = 16.000
+NoSpread.MouseButton1Down:connect(function()
+
+	game:GetService("ReplicatedStorage").Weapons.G17.Spread:Destroy()
+	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].Spread:Destroy()
+	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].Spread:Destroy()
+	game:GetService("ReplicatedStorage").Weapons.Knife.Spread:Destroy()
+	game:GetService("ReplicatedStorage").Weapons.Flashlight.Spread:Destroy()
+	game:GetService("ReplicatedStorage").Weapons.M4A1.Spread:Destroy()
+	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Spread:Destroy()
+	game:GetService("ReplicatedStorage").Weapons["MAC-10"].Spread:Destroy()
+	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].Spread:Destroy()
+	game:GetService("ReplicatedStorage").Weapons.MP5.Spread:Destroy()
+	game:GetService("ReplicatedStorage").Weapons.M1911.Spread:Destroy()
+
+
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "[Mrgunz#2289]: No Spread.";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+end)
+
+PickUpIthaca37.Name = "Pick Up Ithaca37"
+PickUpIthaca37.Parent = GunMenuFrame
+PickUpIthaca37.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+PickUpIthaca37.BorderSizePixel = 0
+PickUpIthaca37.Position = UDim2.new(0.0336562991, 0, 0.525233746, 0)
+PickUpIthaca37.Size = UDim2.new(0, 117, 0, 32)
+PickUpIthaca37.Font = Enum.Font.SourceSans
+PickUpIthaca37.Text = "Pick Up Ithaca37"
+PickUpIthaca37.TextColor3 = Color3.fromRGB(0, 0, 0)
+PickUpIthaca37.TextSize = 16.000
+PickUpIthaca37.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "Pickup",
+			[2] = workspace.Map.Ignore["Ithaca 37"]
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+PickUpM4A1.Name = "Pick Up M4A1"
+PickUpM4A1.Parent = GunMenuFrame
+PickUpM4A1.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+PickUpM4A1.BorderSizePixel = 0
+PickUpM4A1.Position = UDim2.new(0.0347380191, 0, 0.255233616, 0)
+PickUpM4A1.Size = UDim2.new(0, 117, 0, 32)
+PickUpM4A1.Font = Enum.Font.SourceSans
+PickUpM4A1.Text = "Pick Up M4A1"
+PickUpM4A1.TextColor3 = Color3.fromRGB(0, 0, 0)
+PickUpM4A1.TextSize = 16.000
+PickUpM4A1.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "Pickup",
+			[2] = workspace.Map.Ignore.M4A1
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+PickUpMAC10.Name = "Pick Up MAC-10"
+PickUpMAC10.Parent = GunMenuFrame
+PickUpMAC10.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+PickUpMAC10.BorderSizePixel = 0
+PickUpMAC10.Position = UDim2.new(0.0343534946, 0, 0.39190039, 0)
+PickUpMAC10.Size = UDim2.new(0, 117, 0, 32)
+PickUpMAC10.Font = Enum.Font.SourceSans
+PickUpMAC10.Text = "Pick Up MAC-10"
+PickUpMAC10.TextColor3 = Color3.fromRGB(0, 0, 0)
+PickUpMAC10.TextSize = 16.000
+PickUpMAC10.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "Pickup",
+			[2] = workspace.Map.Ignore["MAC-10"]
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+PickUpAllGuns.Name = "Pick Up All Guns"
+PickUpAllGuns.Parent = GunMenuFrame
+PickUpAllGuns.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+PickUpAllGuns.BorderSizePixel = 0
+PickUpAllGuns.Position = UDim2.new(0.0329849124, 0, 0.661900401, 0)
+PickUpAllGuns.Size = UDim2.new(0, 117, 0, 32)
+PickUpAllGuns.Font = Enum.Font.SourceSans
+PickUpAllGuns.Text = "Pick Up All Guns"
+PickUpAllGuns.TextColor3 = Color3.fromRGB(0, 0, 0)
+PickUpAllGuns.TextSize = 16.000
+PickUpAllGuns.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "Pickup",
+			[2] = workspace.Map.Ignore.M4A1
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+	wait(1)
+
+	local args = {
+		[1] = {
+			[1] = "Pickup",
+			[2] = workspace.Map.Ignore["Ithaca 37"]
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+	wait(1)
+
+	local args = {
+		[1] = {
+			[1] = "Pickup",
+			[2] = workspace.Map.Ignore["MAC-10"]
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+	wait(1)
+
+	local args = {
+		[1] = {
+			[1] = "Pickup",
+			[2] = workspace.Map.Ignore["MAC-10"]
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+	wait(1)
+
+	local args = {
+		[1] = {
+			[1] = "Pickup",
+			[2] = workspace.Map.Ignore["Ithaca 37"]
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+	wait(1)
+
+	local args = {
+		[1] = {
+			[1] = "Pickup",
+			[2] = workspace.Map.Ignore.M4A1
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+ModAmmo.Name = "Mod Ammo"
+ModAmmo.Parent = GunMenuFrame
+ModAmmo.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+ModAmmo.BorderSizePixel = 0
+ModAmmo.Position = UDim2.new(0.364359409, 0, 0.525233805, 0)
+ModAmmo.Size = UDim2.new(0, 117, 0, 30)
+ModAmmo.Font = Enum.Font.SourceSans
+ModAmmo.Text = "Mod Ammo"
+ModAmmo.TextColor3 = Color3.fromRGB(0, 0, 0)
+ModAmmo.TextSize = 16.000
+ModAmmo.MouseButton1Down:connect(function()
+	game:GetService("ReplicatedStorage").Weapons.G17.Ammo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].Ammo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].Ammo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.M4A1.Ammo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Ammo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["MAC-10"].Ammo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].Ammo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.MP5.Ammo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.M1911.Ammo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.Flashlight.Ammo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.Knife.Ammo.Value = 1e+14
+
+
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "[Mrgunz#2289]: Mod Ammo.";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+end)
+
+FullAuto.Name = "Full Auto"
+FullAuto.Parent = GunMenuFrame
+FullAuto.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+FullAuto.BorderSizePixel = 0
+FullAuto.Position = UDim2.new(0.364359409, 0, 0.665233791, 0)
+FullAuto.Size = UDim2.new(0, 117, 0, 30)
+FullAuto.Font = Enum.Font.SourceSans
+FullAuto.Text = "Full Auto"
+FullAuto.TextColor3 = Color3.fromRGB(0, 0, 0)
+FullAuto.TextSize = 16.000
+FullAuto.MouseButton1Down:connect(function()
+
+	game:GetService("ReplicatedStorage").Weapons.G17.Auto.Value = true
+	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].Auto.Value = true
+	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].Auto.Value = true
+	game:GetService("ReplicatedStorage").Weapons.M4A1.Auto.Value = true
+	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Auto.Value = true
+	game:GetService("ReplicatedStorage").Weapons["MAC-10"].Auto.Value = true
+	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].Auto.Value = true
+	game:GetService("ReplicatedStorage").Weapons.MP5.Auto.Value = true
+	game:GetService("ReplicatedStorage").Weapons.M1911.Auto.Value = true
+
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "[Mrgunz#2289]: Full Auto.";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+end)
+
+ModFirerate.Name = "Mod Firerate"
+ModFirerate.Parent = GunMenuFrame
+ModFirerate.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+ModFirerate.BorderSizePixel = 0
+ModFirerate.Position = UDim2.new(0.702889502, 0, 0.668567121, 0)
+ModFirerate.Size = UDim2.new(0, 117, 0, 30)
+ModFirerate.Font = Enum.Font.SourceSans
+ModFirerate.Text = "Mod Firerate"
+ModFirerate.TextColor3 = Color3.fromRGB(0, 0, 0)
+ModFirerate.TextSize = 16.000
+ModFirerate.MouseButton1Down:connect(function()
+
+	game:GetService("ReplicatedStorage").Weapons.G17.FireRate.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].FireRate.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].FireRate.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons.M4A1.FireRate.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].FireRate.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons["MAC-10"].FireRate.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].FireRate.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons.MP5.FireRate.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons.M1911.FireRate.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons.Flashlight.FireRate.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons.Knife.FireRate.Value = 0.0001
+	wait(1)
+	game:GetService("ReplicatedStorage").Weapons.Flashlight.HitFrame.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.Knife.HitFrame.Value = 1e+14
+
+
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "[Mrgunz#2289]: Mod Fire Rate.";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+end)
+
+ModRange.Name = "Mod Range"
+ModRange.Parent = GunMenuFrame
+ModRange.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+ModRange.BorderSizePixel = 0
+ModRange.Position = UDim2.new(0.702889502, 0, 0.251900405, 0)
+ModRange.Size = UDim2.new(0, 117, 0, 30)
+ModRange.Font = Enum.Font.SourceSans
+ModRange.Text = "Mod Range"
+ModRange.TextColor3 = Color3.fromRGB(0, 0, 0)
+ModRange.TextSize = 16.000
+ModRange.MouseButton1Down:connect(function()
+	game:GetService("ReplicatedStorage").Weapons.G17.RangeModifier.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].RangeModifier.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].RangeModifier.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.M4A1.RangeModifier.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].RangeModifier.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["MAC-10"].RangeModifier.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].RangeModifier.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.MP5.RangeModifier.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.M1911.RangeModifier.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.Flashlight.RangeModifier.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.Knife.RangeModifier.Value = 1e+14
+	wait(1)
+	game:GetService("ReplicatedStorage").Weapons.G17.Range.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].Range.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].Range.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.M4A1.Range.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Range.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["MAC-10"].Range.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].Range.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.MP5.Range.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.M1911.Range.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.Flashlight.Range.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.Knife.Range.Value = 1e+14
+
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "[Mrgunz#2289]: Mod Range.";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+end)
+
+ModReloadTime.Name = "Mod Reload Time"
+ModReloadTime.Parent = GunMenuFrame
+ModReloadTime.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+ModReloadTime.BorderSizePixel = 0
+ModReloadTime.Position = UDim2.new(0.702889502, 0, 0.38856706, 0)
+ModReloadTime.Size = UDim2.new(0, 117, 0, 30)
+ModReloadTime.Font = Enum.Font.SourceSans
+ModReloadTime.Text = "Mod Reload Time"
+ModReloadTime.TextColor3 = Color3.fromRGB(0, 0, 0)
+ModReloadTime.TextSize = 16.000
+ModReloadTime.MouseButton1Down:connect(function()
+
+	game:GetService("ReplicatedStorage").Weapons.G17.ReloadTime.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].ReloadTime.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].ReloadTime.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons.M4A1.ReloadTime.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].ReloadTime.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons["MAC-10"].ReloadTime.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].ReloadTime.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons.MP5.ReloadTime.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons.M1911.ReloadTime.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons.Flashlight.ReloadTime.Value = 0.0001
+	game:GetService("ReplicatedStorage").Weapons.Knife.ReloadTime.Value = 0.0001
+
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "[Mrgunz#2289]: Mod Reload Time. ";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+end)
+
+ModStoredAmmo.Name = "Mod Stored Ammo"
+ModStoredAmmo.Parent = GunMenuFrame
+ModStoredAmmo.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+ModStoredAmmo.BorderSizePixel = 0
+ModStoredAmmo.Position = UDim2.new(0.702889502, 0, 0.525233686, 0)
+ModStoredAmmo.Size = UDim2.new(0, 117, 0, 30)
+ModStoredAmmo.Font = Enum.Font.SourceSans
+ModStoredAmmo.Text = "Mod Stored Ammo"
+ModStoredAmmo.TextColor3 = Color3.fromRGB(0, 0, 0)
+ModStoredAmmo.TextSize = 16.000
+ModStoredAmmo.MouseButton1Down:connect(function()
+
+
+	game:GetService("ReplicatedStorage").Weapons.G17.StoredAmmo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].StoredAmmo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].StoredAmmo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.M4A1.StoredAmmo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].StoredAmmo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["MAC-10"].StoredAmmo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].StoredAmmo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.MP5.StoredAmmo.Value = 1e+14
+	game:GetService("ReplicatedStorage").Weapons.M1911.StoredAmmo.Value = 1e+14
+
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "[Mrgunz#2289]: Mod Stored Ammo.";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+end)
+
+SuperShotgun.Name = "Super Shotgun"
+SuperShotgun.Parent = GunMenuFrame
+SuperShotgun.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+SuperShotgun.BorderSizePixel = 0
+SuperShotgun.Position = UDim2.new(0.368813843, 0, 0.795233786, 0)
+SuperShotgun.Size = UDim2.new(0, 117, 0, 30)
+SuperShotgun.Font = Enum.Font.SourceSans
+SuperShotgun.Text = "Super Shotgun"
+SuperShotgun.TextColor3 = Color3.fromRGB(0, 0, 0)
+SuperShotgun.TextSize = 16.000
+SuperShotgun.MouseButton1Down:connect(function()
+	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Bullets.Value = 50
+
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "[Mrgunz#2289]: Super Shotgun Laggy.";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+end)
+
+UIv6_2.Name = "UI v6"
+UIv6_2.Parent = GunMenu
+UIv6_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv6_2.BorderSizePixel = 0
+UIv6_2.Position = UDim2.new(0.997659206, 0, 0, 0)
+UIv6_2.Size = UDim2.new(0, 3, 0, 321)
+UIv6_2.Font = Enum.Font.SourceSans
+UIv6_2.Text = ""
+UIv6_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv6_2.TextSize = 14.000
+
+UIv7.Name = "UI v7"
+UIv7.Parent = GunMenu
+UIv7.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv7.BorderSizePixel = 0
+UIv7.Position = UDim2.new(-0.00653364882, 0, 0, 0)
+UIv7.Size = UDim2.new(0, 3, 0, 321)
+UIv7.Font = Enum.Font.SourceSans
+UIv7.Text = ""
+UIv7.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv7.TextSize = 14.000
+
+UIv8.Name = "UI v8"
+UIv8.Parent = GunMenu
+UIv8.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv8.BorderSizePixel = 0
+UIv8.Position = UDim2.new(-0.0065337047, 0, 0, 0)
+UIv8.Size = UDim2.new(0, 482, 0, 3)
+UIv8.Font = Enum.Font.SourceSans
+UIv8.Text = ""
+UIv8.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv8.TextSize = 14.000
+
+UIv9.Name = "UI v9"
+UIv9.Parent = GunMenu
+UIv9.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv9.BorderSizePixel = 0
+UIv9.Position = UDim2.new(-0.0065337047, 0, 0.996884763, 0)
+UIv9.Size = UDim2.new(0, 480, 0, 3)
+UIv9.Font = Enum.Font.SourceSans
+UIv9.Text = ""
+UIv9.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv9.TextSize = 14.000
+
+LightMenu.Name = "Light Menu"
+LightMenu.Parent = RobberMenu
+LightMenu.Active = true
+LightMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+LightMenu.BorderSizePixel = 0
+LightMenu.Position = UDim2.new(0.0752292871, 0, 0.432038784, 0)
+LightMenu.Size = UDim2.new(0, 364, 0, 321)
+LightMenu.Visible = false
+LightMenu.Draggable = true
+
+
+LightFrame.Name = "Light Frame"
+LightFrame.Parent = LightMenu
+LightFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+LightFrame.BorderSizePixel = 0
+LightFrame.Position = UDim2.new(0.0318013281, 0, 0.0305747148, 0)
+LightFrame.Size = UDim2.new(0, 343, 0, 301)
+
+LightMenuLabel.Name = "Light Menu Label"
+LightMenuLabel.Parent = LightFrame
+LightMenuLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+LightMenuLabel.BorderSizePixel = 0
+LightMenuLabel.Position = UDim2.new(-0.0337483473, 0, 0.0472893678, 0)
+LightMenuLabel.Size = UDim2.new(0, 364, 0, 34)
+LightMenuLabel.Font = Enum.Font.SourceSans
+LightMenuLabel.Text = "Light Menu"
+LightMenuLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+LightMenuLabel.TextSize = 27.000
+
+ToggleAllLights.Name = "Toggle All Lights"
+ToggleAllLights.Parent = LightFrame
+ToggleAllLights.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+ToggleAllLights.BorderSizePixel = 0
+ToggleAllLights.Position = UDim2.new(0.305582404, 0, 0.189666241, 0)
+ToggleAllLights.Size = UDim2.new(0, 131, 0, 32)
+ToggleAllLights.Font = Enum.Font.SourceSans
+ToggleAllLights.Text = "Toggle All Lights"
+ToggleAllLights.TextColor3 = Color3.fromRGB(0, 0, 0)
+ToggleAllLights.TextSize = 16.000
+ToggleAllLights.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "ToggleLight",
+			[2] = "AllLights"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+BackOfMallLight.Name = "Back Of Mall Light"
+BackOfMallLight.Parent = LightFrame
+BackOfMallLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+BackOfMallLight.BorderSizePixel = 0
+BackOfMallLight.Position = UDim2.new(0.565054774, 0, 0.330067754, 0)
+BackOfMallLight.Size = UDim2.new(0, 131, 0, 32)
+BackOfMallLight.Font = Enum.Font.SourceSans
+BackOfMallLight.Text = "Back Of Mall Light"
+BackOfMallLight.TextColor3 = Color3.fromRGB(0, 0, 0)
+BackOfMallLight.TextSize = 16.000
+BackOfMallLight.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "ToggleLight",
+			[2] = "Back of mall"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+StorageRoomLight.Name = "Storage Room Light"
+StorageRoomLight.Parent = LightFrame
+StorageRoomLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+StorageRoomLight.BorderSizePixel = 0
+StorageRoomLight.Position = UDim2.new(0.565054774, 0, 0.492858469, 0)
+StorageRoomLight.Size = UDim2.new(0, 131, 0, 32)
+StorageRoomLight.Font = Enum.Font.SourceSans
+StorageRoomLight.Text = "Storage Room Light"
+StorageRoomLight.TextColor3 = Color3.fromRGB(0, 0, 0)
+StorageRoomLight.TextSize = 16.000
+StorageRoomLight.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "ToggleLight",
+			[2] = "Storage Room"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+CrossroadsLight.Name = "Crossroads Light"
+CrossroadsLight.Parent = LightFrame
+CrossroadsLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+CrossroadsLight.BorderSizePixel = 0
+CrossroadsLight.Position = UDim2.new(0.0519380681, 0, 0.332523346, 0)
+CrossroadsLight.Size = UDim2.new(0, 131, 0, 32)
+CrossroadsLight.Font = Enum.Font.SourceSans
+CrossroadsLight.Text = "Crossroads Light"
+CrossroadsLight.TextColor3 = Color3.fromRGB(0, 0, 0)
+CrossroadsLight.TextSize = 16.000
+CrossroadsLight.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "ToggleLight",
+			[2] = "Crossroads"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+WingLight.Name = "Wing Light"
+WingLight.Parent = LightFrame
+WingLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+WingLight.BorderSizePixel = 0
+WingLight.Position = UDim2.new(0.567614496, 0, 0.658971488, 0)
+WingLight.Size = UDim2.new(0, 131, 0, 32)
+WingLight.Font = Enum.Font.SourceSans
+WingLight.Text = "Wing Light"
+WingLight.TextColor3 = Color3.fromRGB(0, 0, 0)
+WingLight.TextSize = 16.000
+WingLight.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "ToggleLight",
+			[2] = "Wing"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+BackroomLight.Name = "Backroom Light"
+BackroomLight.Parent = LightFrame
+BackroomLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+BackroomLight.BorderSizePixel = 0
+BackroomLight.Position = UDim2.new(0.0515822694, 0, 0.495314121, 0)
+BackroomLight.Size = UDim2.new(0, 131, 0, 32)
+BackroomLight.Font = Enum.Font.SourceSans
+BackroomLight.Text = "Backroom Light"
+BackroomLight.TextColor3 = Color3.fromRGB(0, 0, 0)
+BackroomLight.TextSize = 16.000
+BackroomLight.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "ToggleLight",
+			[2] = "Backroom"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+DownstairsLight.Name = "Downstairs Light"
+DownstairsLight.Parent = LightFrame
+DownstairsLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+DownstairsLight.BorderSizePixel = 0
+DownstairsLight.Position = UDim2.new(0.0494952276, 0, 0.658971429, 0)
+DownstairsLight.Size = UDim2.new(0, 131, 0, 32)
+DownstairsLight.Font = Enum.Font.SourceSans
+DownstairsLight.Text = "Downstairs Light"
+DownstairsLight.TextColor3 = Color3.fromRGB(0, 0, 0)
+DownstairsLight.TextSize = 16.000
+DownstairsLight.MouseButton1Down:connect(function()
+	local args = {
+		[1] = {
+			[1] = "ToggleLight",
+			[2] = "Downstairs"
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+end)
+
+UI5.Name = "UI 5"
+UI5.Parent = LightMenu
+UI5.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+UI5.BorderSizePixel = 0
+UI5.Position = UDim2.new(0, 0, 0.0280372873, 0)
+UI5.Size = UDim2.new(0, 364, 0, 20)
+UI5.Font = Enum.Font.SourceSans
+UI5.Text = ""
+UI5.TextColor3 = Color3.fromRGB(0, 0, 0)
+UI5.TextSize = 14.000
+
+CloseLightMenu.Name = "Close Light Menu"
+CloseLightMenu.Parent = LightMenu
+CloseLightMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CloseLightMenu.BorderSizePixel = 0
+CloseLightMenu.Position = UDim2.new(0.92286396, 0, 0.0031152647, 0)
+CloseLightMenu.Size = UDim2.new(0, 26, 0, 29)
+CloseLightMenu.Font = Enum.Font.SourceSans
+CloseLightMenu.Text = "X"
+CloseLightMenu.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseLightMenu.TextSize = 28.000
+CloseLightMenu.MouseButton1Down:connect(function()
+	LightMenu.Visible = false
+	MainMenu.Visible = true
+end)
+
+UIv6_3.Name = "UI v6"
+UIv6_3.Parent = LightMenu
+UIv6_3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv6_3.BorderSizePixel = 0
+UIv6_3.Position = UDim2.new(0, 0, 0.99065423, 0)
+UIv6_3.Size = UDim2.new(0, 364, 0, 3)
+UIv6_3.Font = Enum.Font.SourceSans
+UIv6_3.Text = ""
+UIv6_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv6_3.TextSize = 14.000
+
+UIv7_2.Name = "UI v7"
+UIv7_2.Parent = LightMenu
+UIv7_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv7_2.BorderSizePixel = 0
+UIv7_2.Position = UDim2.new(0, 0, -0.0093457615, 0)
+UIv7_2.Size = UDim2.new(0, 364, 0, 3)
+UIv7_2.Font = Enum.Font.SourceSans
+UIv7_2.Text = ""
+UIv7_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv7_2.TextSize = 14.000
+
+UIv8_2.Name = "UI v8"
+UIv8_2.Parent = LightMenu
+UIv8_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv8_2.BorderSizePixel = 0
+UIv8_2.Position = UDim2.new(0.993339777, 0, -0.00992348883, 0)
+UIv8_2.Size = UDim2.new(0, 3, 0, 324)
+UIv8_2.Font = Enum.Font.SourceSans
+UIv8_2.Text = ""
+UIv8_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv8_2.TextSize = 14.000
+
+UIv9_2.Name = "UI v9"
+UIv9_2.Parent = LightMenu
+UIv9_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv9_2.BorderSizePixel = 0
+UIv9_2.Position = UDim2.new(-0.000116570445, 0, -0.00369295967, 0)
+UIv9_2.Size = UDim2.new(0, 3, 0, 319)
+UIv9_2.Font = Enum.Font.SourceSans
+UIv9_2.Text = ""
+UIv9_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv9_2.TextSize = 14.000
+
+LoopMenu.Name = "Loop Menu"
+LoopMenu.Parent = RobberMenu
+LoopMenu.Active = true
+LoopMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+LoopMenu.BorderSizePixel = 0
+LoopMenu.Position = UDim2.new(0.105198801, 0, 0.422330081, 0)
+LoopMenu.Size = UDim2.new(0, 313, 0, 321)
+LoopMenu.Visible = false
+LoopMenu.Draggable = true
+
+
+LoopFrame.Name = "Loop Frame "
+LoopFrame.Parent = LoopMenu
+LoopFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+LoopFrame.BorderSizePixel = 0
+LoopFrame.Position = UDim2.new(0.0319488831, 0, 0.0280373823, 0)
+LoopFrame.Size = UDim2.new(0, 294, 0, 302)
+
+LoopStuffLabel.Name = "Loop Stuff Label"
+LoopStuffLabel.Parent = LoopFrame
+LoopStuffLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+LoopStuffLabel.BorderSizePixel = 0
+LoopStuffLabel.Position = UDim2.new(-0.029126225, 0, 0.0431893468, 0)
+LoopStuffLabel.Size = UDim2.new(0, 311, 0, 34)
+LoopStuffLabel.Font = Enum.Font.SourceSans
+LoopStuffLabel.Text = "Loop Stuff"
+LoopStuffLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoopStuffLabel.TextSize = 27.000
+
+LoopGetKeyLStops.Name = "Loop Get Key (L Stops)"
+LoopGetKeyLStops.Parent = LoopFrame
+LoopGetKeyLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+LoopGetKeyLStops.BorderSizePixel = 0
+LoopGetKeyLStops.Position = UDim2.new(0.216703042, 0, 0.195653066, 0)
+LoopGetKeyLStops.Size = UDim2.new(0, 164, 0, 31)
+LoopGetKeyLStops.Font = Enum.Font.SourceSans
+LoopGetKeyLStops.Text = "Loop Get Key (L Stops)"
+LoopGetKeyLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
+LoopGetKeyLStops.TextSize = 14.000
+LoopGetKeyLStops.MouseButton1Down:connect(function()
+	repeat wait()
+		local args = {
+			[1] = {
+				[1] = "getkey",
+				[2] = workspace.Map.Keys.IntKey
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
+end)
+
+LoopCloakLStops.Name = "Loop Cloak (L Stops)"
+LoopCloakLStops.Parent = LoopFrame
+LoopCloakLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+LoopCloakLStops.BorderSizePixel = 0
+LoopCloakLStops.Position = UDim2.new(0.219562337, 0, 0.593004048, 0)
+LoopCloakLStops.Size = UDim2.new(0, 164, 0, 32)
+LoopCloakLStops.Font = Enum.Font.SourceSans
+LoopCloakLStops.Text = "Loop Cloak (L Stops)"
+LoopCloakLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
+LoopCloakLStops.TextSize = 14.000
+LoopCloakLStops.MouseButton1Down:connect(function()
+	repeat wait()
+		local args = {
+			[1] = {
+				[1] = "Stealth"
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
+end)
+
+LoopHackComputerLStops.Name = "Loop Hack Computer (L Stops)"
+LoopHackComputerLStops.Parent = LoopFrame
+LoopHackComputerLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+LoopHackComputerLStops.BorderSizePixel = 0
+LoopHackComputerLStops.Position = UDim2.new(0.219562337, 0, 0.864527225, 0)
+LoopHackComputerLStops.Size = UDim2.new(0, 164, 0, 32)
+LoopHackComputerLStops.Font = Enum.Font.SourceSans
+LoopHackComputerLStops.Text = "Loop Hack Computer (L Stops)"
+LoopHackComputerLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
+LoopHackComputerLStops.TextSize = 14.000
+LoopHackComputerLStops.MouseButton1Down:connect(function()
+	repeat wait()
+		local args = {
+			[1] = {
+				[1] = "hackputer",
+				[2] = workspace.Map.Objective.Computers.Computer1
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+		local args = {
+			[1] = {
+				[1] = "hackputer",
+				[2] = workspace.Map.Objective.Computers.Computer2
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+		local args = {
+			[1] = {
+				[1] = "hackputer",
+				[2] = workspace.Map.Objective.Computers.Computer3
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+
+		local args = {
+			[1] = {
+				[1] = "hackputer",
+				[2] = workspace.Map.Objective.Computers.Computer4
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
+end)
+
+LoopNoPowerLStops.Name = "Loop No Power (L Stops)"
+LoopNoPowerLStops.Parent = LoopFrame
+LoopNoPowerLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+LoopNoPowerLStops.BorderSizePixel = 0
+LoopNoPowerLStops.Position = UDim2.new(0.216703042, 0, 0.467176259, 0)
+LoopNoPowerLStops.Size = UDim2.new(0, 164, 0, 31)
+LoopNoPowerLStops.Font = Enum.Font.SourceSans
+LoopNoPowerLStops.Text = "Loop No Power (L Stops)"
+LoopNoPowerLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
+LoopNoPowerLStops.TextSize = 14.000
+LoopNoPowerLStops.MouseButton1Down:connect(function()
+	repeat wait()
+		local args = {
+			[1] = {
+				[1] = "HitObject",
+				[2] = game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"],
+				[3] = workspace.Map["Guard Tools"]["breaker box"],
+				[4] = Vector3.new(1328.5128173828, 15.309519767761, -63.756324768066),
+				[5] = false,
+				[6] = false,
+				[7] = ""
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
+end)
+
+LoopUnlockArmouryLStops.Name = "Loop Unlock Armoury (L Stops)"
+LoopUnlockArmouryLStops.Parent = LoopFrame
+LoopUnlockArmouryLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+LoopUnlockArmouryLStops.BorderSizePixel = 0
+LoopUnlockArmouryLStops.Position = UDim2.new(0.219562337, 0, 0.728765607, 0)
+LoopUnlockArmouryLStops.Size = UDim2.new(0, 164, 0, 32)
+LoopUnlockArmouryLStops.Font = Enum.Font.SourceSans
+LoopUnlockArmouryLStops.Text = "Loop Unlock Armoury (L Stops)"
+LoopUnlockArmouryLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
+LoopUnlockArmouryLStops.TextSize = 14.000
+LoopUnlockArmouryLStops.MouseButton1Down:connect(function()
+	repeat wait()
+		local args = {
+			[1] = {
+				[1] = "Armoury",
+				[2] = "unlock"
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
+end)
+
+LoopSpotRobberLStops.Name = "Loop Spot Robber (L Stops)"
+LoopSpotRobberLStops.Parent = LoopFrame
+LoopSpotRobberLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+LoopSpotRobberLStops.BorderSizePixel = 0
+LoopSpotRobberLStops.Position = UDim2.new(0.216703042, 0, 0.33141464, 0)
+LoopSpotRobberLStops.Size = UDim2.new(0, 164, 0, 31)
+LoopSpotRobberLStops.Font = Enum.Font.SourceSans
+LoopSpotRobberLStops.Text = "Loop Spot Robber (L Stops)"
+LoopSpotRobberLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
+LoopSpotRobberLStops.TextSize = 14.000
+LoopSpotRobberLStops.MouseButton1Down:connect(function()
+	repeat wait()
+		local args = {
+			[1] = {
+				[1] = "Spotted",
+				[2] = "",
+				[3] = true
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
+	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
+end)
+
+UI3.Name = "UI 3"
+UI3.Parent = LoopMenu
+UI3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+UI3.BorderSizePixel = 0
+UI3.Position = UDim2.new(0.00459070178, 0, 0.0271801334, 0)
+UI3.Size = UDim2.new(0, 311, 0, 14)
+UI3.Font = Enum.Font.SourceSans
+UI3.Text = ""
+UI3.TextColor3 = Color3.fromRGB(0, 0, 0)
+UI3.TextSize = 14.000
+
+CloseLoopMenu.Name = "Close Loop Menu"
+CloseLoopMenu.Parent = LoopMenu
+CloseLoopMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CloseLoopMenu.BorderSizePixel = 0
+CloseLoopMenu.Position = UDim2.new(0.914053202, 0, 0, 0)
+CloseLoopMenu.Size = UDim2.new(0, 26, 0, 30)
+CloseLoopMenu.Font = Enum.Font.SourceSans
+CloseLoopMenu.Text = "X"
+CloseLoopMenu.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseLoopMenu.TextSize = 28.000
+CloseLoopMenu.MouseButton1Down:connect(function()
+	LoopMenu.Visible = false
+	MainMenu.Visible = true
+end)
+
+
+
+
+UIv4_2.Name = "UI v4"
+UIv4_2.Parent = LoopMenu
+UIv4_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv4_2.BorderSizePixel = 0
+UIv4_2.Position = UDim2.new(0, 0, 0.99065423, 0)
+UIv4_2.Size = UDim2.new(0, 313, 0, 3)
+UIv4_2.Font = Enum.Font.SourceSans
+UIv4_2.Text = ""
+UIv4_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv4_2.TextSize = 14.000
+
+UIv5_2.Name = "UI v5"
+UIv5_2.Parent = LoopMenu
+UIv5_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv5_2.BorderSizePixel = 0
+UIv5_2.Size = UDim2.new(0, 313, 0, 3)
+UIv5_2.Font = Enum.Font.SourceSans
+UIv5_2.Text = ""
+UIv5_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv5_2.TextSize = 14.000
+
+UIv6_4.Name = "UI v6"
+UIv6_4.Parent = LoopMenu
+UIv6_4.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv6_4.BorderSizePixel = 0
+UIv6_4.Position = UDim2.new(0.997659206, 0, 0, 0)
+UIv6_4.Size = UDim2.new(0, 3, 0, 321)
+UIv6_4.Font = Enum.Font.SourceSans
+UIv6_4.Text = ""
+UIv6_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv6_4.TextSize = 14.000
+
+UIv7_3.Name = "UI v7"
+UIv7_3.Parent = LoopMenu
+UIv7_3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv7_3.BorderSizePixel = 0
+UIv7_3.Position = UDim2.new(-0.00234078593, 0, 0, 0)
+UIv7_3.Size = UDim2.new(0, 2, 0, 321)
+UIv7_3.Font = Enum.Font.SourceSans
+UIv7_3.Text = ""
+UIv7_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv7_3.TextSize = 14.000
+
+MainMenu.Name = "Main Menu"
+MainMenu.Parent = RobberMenu
+MainMenu.Active = true
+MainMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MainMenu.BorderSizePixel = 0
+MainMenu.Position = UDim2.new(0.0091743134, 0, 0.37378642, 0)
+MainMenu.Size = UDim2.new(0, 477, 0, 321)
+MainMenu.Draggable = true
 
 
 _2ndFrame.Name = "2nd Frame"
@@ -146,10 +1421,10 @@ BreakServer.Text = "Break Server"
 BreakServer.TextColor3 = Color3.fromRGB(0, 0, 0)
 BreakServer.TextSize = 14.000
 BreakServer.MouseButton1Down:connect(function()
-	print "Started"
+	warn("Breaking Server.") 
 	game.StarterGui:SetCore("SendNotification", 
-		{Title = "Robber Cheat";
-			Text = "Breaking Server";
+		{Title = "Robber Menu";
+			Text = "Breaking Server.";
 			Duration = 3;})
 	wait(1)
 	local LocalPlayer = game:GetService("Players").LocalPlayer
@@ -163,13 +1438,12 @@ BreakServer.MouseButton1Down:connect(function()
 	LocalPlayer.Character = char
 
 	wait(2)
-	print "Done"
+	warn("Done.") 
 	game.StarterGui:SetCore("SendNotification", 
-		{Title = "Robber Cheat";
-			Text = "Done";
+		{Title = "Robber Menu";
+			Text = "Done.";
 			Duration = 3;})
 end)
-
 
 ChatSpy.Name = "Chat Spy"
 ChatSpy.Parent = _2ndFrame
@@ -273,15 +1547,15 @@ GetKey.MouseButton1Down:connect(function()
 	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
 end)
 
-TextLabel.Parent = _2ndFrame
-TextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.900216937, 0, 0.923588037, 0)
-TextLabel.Size = UDim2.new(0, 46, 0, 23)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "v4"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 15.000
+TextLabel_2.Parent = _2ndFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.900216937, 0, 0.923588037, 0)
+TextLabel_2.Size = UDim2.new(0, 46, 0, 23)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "v6"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 15.000
 
 HackComputers.Name = "Hack Computers"
 HackComputers.Parent = _2ndFrame
@@ -376,7 +1650,14 @@ FEPlaySounds.MouseButton1Down:connect(function()
 			end
 		end
 	else
-		print('Not Working')
+		print ("Not Working.")
+		bc = BrickColor.new("White")
+		game.StarterGui:SetCore("ChatMakeSystemMessage", {
+			Text = "[Mrgunz#2289]: Not Working.";
+			Font = Enum.Font.SourceSans;
+			Color = bc.Color;
+			FontSize = Enum.FontSize.Size9;
+		})
 	end
 end)
 
@@ -393,7 +1674,7 @@ UnlockArmoury.TextSize = 14.000
 UnlockArmoury.MouseButton1Down:connect(function()
 	game.StarterGui:SetCore("SendNotification", {
 		Title = "Robber Menu";
-		Text = "Unlock Armoury Guard Team Only";
+		Text = "Guard Team Only";
 		Duration = 3;
 	})
 
@@ -418,31 +1699,27 @@ SilentAim.Text = "Silent Aim"
 SilentAim.TextColor3 = Color3.fromRGB(0, 0, 0)
 SilentAim.TextSize = 14.000
 SilentAim.MouseButton1Down:connect(function()
-	-- settings, if you want to change some settings just re-execute.
+
 	_G.whitelist = {
 		"Player1",
 		"Player2"
 	}
-	_G.friendsListIsWhitelisted = false-- change if you don't want to lock onto your friends
+	_G.friendsListIsWhitelisted = false
 	_G.targetPart = "Head"
 	_G.bindEnabled = false
-	_G.bind = Enum.KeyCode.E -- use the keycode reference: https://developer.roblox.com/en-us/api-reference/enum/KeyCode, this keydisables aimbot
+	_G.bind = Enum.KeyCode.E 
 
 	_G.FOV = 10000000
 
-	-- This is primarily useful in first person shooters, note, wallbang will not work when you disable this.
+
 	local RAYCAST_ENABLED = true
-	-- -- This is rarely useful, however in some cases you might want it.
 	local MOUSE_TARGET_ENABLED = false
-	-- This is useful for most third person shooters.  It will function very well if you're having bugs, switch to mouse position.
 	local MOUSE_HIT_ENABLED = false
-	-- If you want to spoof the mouse's x and y coordinated on the screen.  usually if it's a 3rd person shooter it will use this or mouse hit.
 	local MOUSE_POSITION_ENABLED = true
-	-- I'm not sure what you're going to use this for, but it works I guess
 	local MOUSE_ORIGIN_ENABLED = false
 
 	_G.indexTable = {
-		-- mainly for scripters, but basically these are mouse properties that you might want to enable/disable if it's bugging out.
+
 		["Mouse"] = {
 			["target"] = {
 				Function = function(self, value)
@@ -631,7 +1908,7 @@ SilentAim.MouseButton1Down:connect(function()
 		}
 	}
 
-	-- the actual script
+
 	local getnamecallmethod = getnamecallmethod or getnamecall_method
 	local newcclosure = newcclosure or hide_me or function(func)
 		return func
@@ -667,7 +1944,7 @@ SilentAim.MouseButton1Down:connect(function()
 
 			if not checkcaller() then
 				if aimbot then
-					local table  -- im pretty sure this works like rawget for properties
+					local table  
 					for index, value in pairs(_G.indexTable) do
 						if self:IsA(index) then
 							table = value
@@ -725,7 +2002,7 @@ SilentAim.MouseButton1Down:connect(function()
 		while wait() do
 			pcall(
 				function()
-					-- because this shit breaks like 24/7
+
 					_G.closestCharacter, closestDistance = nil, math.huge
 					for _, currentPlayer in ipairs(game.Players:GetPlayers()) do
 						if not table.find(_G.whitelist, currentPlayer.Name) then
@@ -764,7 +2041,6 @@ SilentAim.MouseButton1Down:connect(function()
 	end
 end)
 
-
 DoObjective.Name = "Do Objective"
 DoObjective.Parent = _2ndFrame
 DoObjective.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
@@ -777,9 +2053,9 @@ DoObjective.TextColor3 = Color3.fromRGB(0, 0, 0)
 DoObjective.TextSize = 14.000
 DoObjective.MouseButton1Down:connect(function()
 	game.StarterGui:SetCore("SendNotification", {
-	Title = "Robber Menu";
-	Text = "Robber Team Only";
-	Duration = 3;
+		Title = "Robber Menu";
+		Text = "Robber Team Only";
+		Duration = 3;
 	})
 	print "Started"
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Map.Objective.Ruby.CFrame
@@ -824,16 +2100,14 @@ DoObjective.MouseButton1Down:connect(function()
 
 	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
 
-	----- Exits
 	wait(2)
 
-
+	----- Exits
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Map.Objective.Exit2.CFrame
 
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Map.Objective.Exit3.CFrame
-	
-	
-	
+
+
 end)
 
 Esp.Name = "Esp"
@@ -852,7 +2126,7 @@ Esp.MouseButton1Down:connect(function()
 		Text = "NumPad 1 Show/Hide";
 		Duration = 3;
 	})
-	local custom_theme = {} --soon
+	local custom_theme = {} 
 
 	local function CreateInstance(cls,props)
 		local inst = Instance.new(cls)
@@ -1138,10 +2412,10 @@ Esp.MouseButton1Down:connect(function()
 		coroutine.resume(co)
 	end
 
-	--main
+
 	do
 		wait(2)
-		--menu buttons
+
 		for _,button in pairs(age1:GetDescendants()) do
 			if button:IsA"TextButton" then
 				button.MouseButton1Click:connect(function()
@@ -1177,7 +2451,7 @@ Esp.MouseButton1Down:connect(function()
 			end
 		end
 
-		--initial player addition
+
 		for _,v in pairs(game:GetService("Players"):GetChildren()) do
 			if not (v.Name == localplayer.Name) then
 				if not (espf:FindFirstChild(v.Name)) then
@@ -1186,7 +2460,7 @@ Esp.MouseButton1Down:connect(function()
 			end
 		end
 
-		--open/close gui
+
 		game:GetService("UserInputService").InputBegan:connect(function(input, gameProcessed)
 			if input.KeyCode == Enum.KeyCode.KeypadOne then
 				if not gameProcessed then
@@ -1195,7 +2469,6 @@ Esp.MouseButton1Down:connect(function()
 			end
 		end)
 
-		--auto-update
 		while wait(10) do
 			for _,v in pairs(game:GetService("Players"):GetChildren()) do
 				if not (v.Name == localplayer.Name) then
@@ -1206,7 +2479,6 @@ Esp.MouseButton1Down:connect(function()
 			end
 		end
 	end
-
 end)
 
 NoPower.Name = "No Power "
@@ -1262,6 +2534,7 @@ SpotRobber.MouseButton1Down:connect(function()
 
 	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
 end)
+
 UI1.Name = "UI 1"
 UI1.Parent = MainMenu
 UI1.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
@@ -1325,957 +2598,328 @@ LoopIcon.MouseButton1Down:connect(function()
 	LoopMenu.Visible = true
 end)
 
-Settings.Name = "Settings"
-Settings.Parent = RobberMenuv4
-Settings.Active = true
-Settings.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Settings.BorderSizePixel = 0
-Settings.Position = UDim2.new(0.034250766, 0, 0.478155345, 0)
-Settings.Size = UDim2.new(0, 326, 0, 321)
-Settings.Draggable = true
-Settings.Visible = false
-
-
-SettingsFrame.Name = "Settings Frame"
-SettingsFrame.Parent = Settings
-SettingsFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-SettingsFrame.BorderSizePixel = 0
-SettingsFrame.Position = UDim2.new(0.0276073627, 0, 0.0311526489, 0)
-SettingsFrame.Size = UDim2.new(0, 309, 0, 301)
-
-SettingsLabel.Name = "Settings Label"
-SettingsLabel.Parent = SettingsFrame
-SettingsLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-SettingsLabel.BorderSizePixel = 0
-SettingsLabel.Position = UDim2.new(-0.0291262139, 0, 0.0431893691, 0)
-SettingsLabel.Size = UDim2.new(0, 326, 0, 34)
-SettingsLabel.Font = Enum.Font.SourceSans
-SettingsLabel.Text = "Settings"
-SettingsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-SettingsLabel.TextSize = 27.000
-
-DeleteMenuButton.Name = "Delete Menu Button"
-DeleteMenuButton.Parent = SettingsFrame
-DeleteMenuButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-DeleteMenuButton.BorderSizePixel = 0
-DeleteMenuButton.Position = UDim2.new(0.030123556, 0, 0.816706479, 0)
-DeleteMenuButton.Size = UDim2.new(0, 117, 0, 32)
-DeleteMenuButton.Font = Enum.Font.SourceSans
-DeleteMenuButton.Text = "Delete Menu"
-DeleteMenuButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-DeleteMenuButton.TextSize = 20.000
-DeleteMenuButton.MouseButton1Down:connect(function()
-bc = BrickColor.new("White")
-game.StarterGui:SetCore("ChatMakeSystemMessage", {
-	Text = "Removing Robber Menu";
-	Font = Enum.Font.SourceSans;
-	Color = bc.Color;
-	FontSize = Enum.FontSize.Size9;
-	})
-	
-wait(2)
-	game:GetService("CoreGui")["Robber Menu v4"]:Destroy()
-end)
-
-TextLabel_2.Parent = SettingsFrame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.848436952, 0, 0.923588037, 0)
-TextLabel_2.Size = UDim2.new(0, 46, 0, 23)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "v4"
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextSize = 15.000
-
-Label.Name = "Label"
-Label.Parent = SettingsFrame
-Label.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-Label.BorderSizePixel = 0
-Label.Position = UDim2.new(0.0291262139, 0, 0.196013287, 0)
-Label.Size = UDim2.new(0, 281, 0, 34)
-Label.Font = Enum.Font.SourceSans
-Label.Text = "UI By Mrgunz#2289"
-Label.TextColor3 = Color3.fromRGB(255, 255, 255)
-Label.TextSize = 15.000
-
-Label_2.Name = "Label"
-Label_2.Parent = SettingsFrame
-Label_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-Label_2.BorderSizePixel = 0
-Label_2.Position = UDim2.new(0.0291262139, 0, 0.308970094, 0)
-Label_2.Size = UDim2.new(0, 281, 0, 34)
-Label_2.Font = Enum.Font.SourceSans
-Label_2.Text = "Scripts By Mrgunz#2289"
-Label_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Label_2.TextSize = 15.000
-
-Label_3.Name = "Label"
-Label_3.Parent = SettingsFrame
-Label_3.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-Label_3.BorderSizePixel = 0
-Label_3.Position = UDim2.new(0.0291262139, 0, 0.441860437, 0)
-Label_3.Size = UDim2.new(0, 281, 0, 34)
-Label_3.Font = Enum.Font.SourceSans
-Label_3.Text = "Silent Aim Not Mine"
-Label_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Label_3.TextSize = 15.000
-
-Label_4.Name = "Label"
-Label_4.Parent = SettingsFrame
-Label_4.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-Label_4.BorderSizePixel = 0
-Label_4.Position = UDim2.new(0.0291262139, 0, 0.578073025, 0)
-Label_4.Size = UDim2.new(0, 281, 0, 34)
-Label_4.Font = Enum.Font.SourceSans
-Label_4.Text = "ESP Not Mine"
-Label_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-Label_4.TextSize = 15.000
-
-UI2.Name = "UI 2"
-UI2.Parent = Settings
-UI2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-UI2.BorderSizePixel = 0
-UI2.Size = UDim2.new(0, 325, 0, 23)
-UI2.Font = Enum.Font.SourceSans
-UI2.Text = ""
-UI2.TextColor3 = Color3.fromRGB(0, 0, 0)
-UI2.TextSize = 14.000
-
-CloseSettings.Name = "Close Settings"
-CloseSettings.Parent = Settings
-CloseSettings.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-CloseSettings.BorderSizePixel = 0
-CloseSettings.Position = UDim2.new(0.91724807, 0, 0, 0)
-CloseSettings.Size = UDim2.new(0, 26, 0, 30)
-CloseSettings.Font = Enum.Font.SourceSans
-CloseSettings.Text = "X"
-CloseSettings.TextColor3 = Color3.fromRGB(255, 255, 255)
-CloseSettings.TextSize = 28.000
-CloseSettings.MouseButton1Down:connect(function()
-	Settings.Visible = false
-	MainMenu.Visible = true
-end)
-
-LoopMenu.Name = "Loop Menu"
-LoopMenu.Parent = RobberMenuv4
-LoopMenu.Active = true
-LoopMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-LoopMenu.BorderSizePixel = 0
-LoopMenu.Position = UDim2.new(0.059938848, 0, 0.429611653, 0)
-LoopMenu.Size = UDim2.new(0, 313, 0, 321)
-LoopMenu.Visible = false
-LoopMenu.Draggable = true
-
-LoopFrame.Name = "Loop Frame "
-LoopFrame.Parent = LoopMenu
-LoopFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-LoopFrame.BorderSizePixel = 0
-LoopFrame.Position = UDim2.new(0.0319488831, 0, 0.0280373823, 0)
-LoopFrame.Size = UDim2.new(0, 294, 0, 302)
-
-
-LoopStuffLabel.Name = "Loop Stuff Label"
-LoopStuffLabel.Parent = LoopFrame
-LoopStuffLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-LoopStuffLabel.BorderSizePixel = 0
-LoopStuffLabel.Position = UDim2.new(-0.029126225, 0, 0.0431893468, 0)
-LoopStuffLabel.Size = UDim2.new(0, 311, 0, 34)
-LoopStuffLabel.Font = Enum.Font.SourceSans
-LoopStuffLabel.Text = "Loop Stuff"
-LoopStuffLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-LoopStuffLabel.TextSize = 27.000
-
-LoopGetKeyLStops.Name = "Loop Get Key (L Stops)"
-LoopGetKeyLStops.Parent = LoopFrame
-LoopGetKeyLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-LoopGetKeyLStops.BorderSizePixel = 0
-LoopGetKeyLStops.Position = UDim2.new(0.216703042, 0, 0.195653066, 0)
-LoopGetKeyLStops.Size = UDim2.new(0, 164, 0, 31)
-LoopGetKeyLStops.Font = Enum.Font.SourceSans
-LoopGetKeyLStops.Text = "Loop Get Key (L Stops)"
-LoopGetKeyLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
-LoopGetKeyLStops.TextSize = 14.000
-LoopGetKeyLStops.MouseButton1Down:connect(function()
-	repeat wait()
-		local args = {
-			[1] = {
-				[1] = "getkey",
-				[2] = workspace.Map.Keys.IntKey
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-
-	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
-end)
-
-LoopCloakLStops.Name = "Loop Cloak (L Stops)"
-LoopCloakLStops.Parent = LoopFrame
-LoopCloakLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-LoopCloakLStops.BorderSizePixel = 0
-LoopCloakLStops.Position = UDim2.new(0.219562337, 0, 0.593004048, 0)
-LoopCloakLStops.Size = UDim2.new(0, 164, 0, 32)
-LoopCloakLStops.Font = Enum.Font.SourceSans
-LoopCloakLStops.Text = "Loop Cloak (L Stops)"
-LoopCloakLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
-LoopCloakLStops.TextSize = 14.000
-LoopCloakLStops.MouseButton1Down:connect(function()
-	repeat wait()
-		local args = {
-			[1] = {
-				[1] = "Stealth"
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
-end)
-
-LoopHackComputerLStops.Name = "Loop Hack Computer (L Stops)"
-LoopHackComputerLStops.Parent = LoopFrame
-LoopHackComputerLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-LoopHackComputerLStops.BorderSizePixel = 0
-LoopHackComputerLStops.Position = UDim2.new(0.219562337, 0, 0.864527225, 0)
-LoopHackComputerLStops.Size = UDim2.new(0, 164, 0, 32)
-LoopHackComputerLStops.Font = Enum.Font.SourceSans
-LoopHackComputerLStops.Text = "Loop Hack Computer (L Stops)"
-LoopHackComputerLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
-LoopHackComputerLStops.TextSize = 14.000
-LoopHackComputerLStops.MouseButton1Down:connect(function()
-	repeat wait()
-		local args = {
-			[1] = {
-				[1] = "hackputer",
-				[2] = workspace.Map.Objective.Computers.Computer1
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-
-		local args = {
-			[1] = {
-				[1] = "hackputer",
-				[2] = workspace.Map.Objective.Computers.Computer2
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-
-		local args = {
-			[1] = {
-				[1] = "hackputer",
-				[2] = workspace.Map.Objective.Computers.Computer3
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-
-		local args = {
-			[1] = {
-				[1] = "hackputer",
-				[2] = workspace.Map.Objective.Computers.Computer4
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
-end)
-
-LoopNoPowerLStops.Name = "Loop No Power (L Stops)"
-LoopNoPowerLStops.Parent = LoopFrame
-LoopNoPowerLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-LoopNoPowerLStops.BorderSizePixel = 0
-LoopNoPowerLStops.Position = UDim2.new(0.216703042, 0, 0.467176259, 0)
-LoopNoPowerLStops.Size = UDim2.new(0, 164, 0, 31)
-LoopNoPowerLStops.Font = Enum.Font.SourceSans
-LoopNoPowerLStops.Text = "Loop No Power (L Stops)"
-LoopNoPowerLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
-LoopNoPowerLStops.TextSize = 14.000
-LoopNoPowerLStops.MouseButton1Down:connect(function()
-	repeat wait()
-		local args = {
-			[1] = {
-				[1] = "HitObject",
-				[2] = game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"],
-				[3] = workspace.Map["Guard Tools"]["breaker box"],
-				[4] = Vector3.new(1328.5128173828, 15.309519767761, -63.756324768066),
-				[5] = false,
-				[6] = false,
-				[7] = ""
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
-end)
-
-LoopUnlockArmouryLStops.Name = "Loop Unlock Armoury (L Stops)"
-LoopUnlockArmouryLStops.Parent = LoopFrame
-LoopUnlockArmouryLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-LoopUnlockArmouryLStops.BorderSizePixel = 0
-LoopUnlockArmouryLStops.Position = UDim2.new(0.219562337, 0, 0.728765607, 0)
-LoopUnlockArmouryLStops.Size = UDim2.new(0, 164, 0, 32)
-LoopUnlockArmouryLStops.Font = Enum.Font.SourceSans
-LoopUnlockArmouryLStops.Text = "Loop Unlock Armoury (L Stops)"
-LoopUnlockArmouryLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
-LoopUnlockArmouryLStops.TextSize = 14.000
-LoopUnlockArmouryLStops.MouseButton1Down:connect(function()
-	repeat wait()
-		local args = {
-			[1] = {
-				[1] = "Armoury",
-				[2] = "unlock"
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
-end)
-
-LoopSpotRobberLStops.Name = "Loop Spot Robber (L Stops)"
-LoopSpotRobberLStops.Parent = LoopFrame
-LoopSpotRobberLStops.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-LoopSpotRobberLStops.BorderSizePixel = 0
-LoopSpotRobberLStops.Position = UDim2.new(0.216703042, 0, 0.33141464, 0)
-LoopSpotRobberLStops.Size = UDim2.new(0, 164, 0, 31)
-LoopSpotRobberLStops.Font = Enum.Font.SourceSans
-LoopSpotRobberLStops.Text = "Loop Spot Robber (L Stops)"
-LoopSpotRobberLStops.TextColor3 = Color3.fromRGB(0, 0, 0)
-LoopSpotRobberLStops.TextSize = 14.000
-LoopSpotRobberLStops.MouseButton1Down:connect(function()
-	repeat wait()
-		local args = {
-			[1] = {
-				[1] = "Spotted",
-				[2] = "",
-				[3] = true
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
-end)
-
-UI3.Name = "UI 3"
-UI3.Parent = LoopMenu
-UI3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-UI3.BorderSizePixel = 0
-UI3.Position = UDim2.new(0.00459070178, 0, 0, 0)
-UI3.Size = UDim2.new(0, 311, 0, 23)
-UI3.Font = Enum.Font.SourceSans
-UI3.Text = ""
-UI3.TextColor3 = Color3.fromRGB(0, 0, 0)
-UI3.TextSize = 14.000
-
-CloseLoopMenu.Name = "Close Loop Menu"
-CloseLoopMenu.Parent = LoopMenu
-CloseLoopMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-CloseLoopMenu.BorderSizePixel = 0
-CloseLoopMenu.Position = UDim2.new(0.914053202, 0, 0, 0)
-CloseLoopMenu.Size = UDim2.new(0, 26, 0, 30)
-CloseLoopMenu.Font = Enum.Font.SourceSans
-CloseLoopMenu.Text = "X"
-CloseLoopMenu.TextColor3 = Color3.fromRGB(255, 255, 255)
-CloseLoopMenu.TextSize = 28.000
-CloseLoopMenu.MouseButton1Down:connect(function()
-	LoopMenu.Visible = false
-	MainMenu.Visible = true
-end)
-
-GunMenu.Name = "Gun Menu"
-GunMenu.Parent = RobberMenuv4
-GunMenu.Active = true
-GunMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-GunMenu.BorderSizePixel = 0
-GunMenu.Position = UDim2.new(0.00672782864, 0, 0.425970823, 0)
-GunMenu.Size = UDim2.new(0, 477, 0, 321)
-GunMenu.Visible = false
-GunMenu.Draggable = true
-
-
-GunMenuFrame.Name = "Gun Menu Frame"
-GunMenuFrame.Parent = GunMenu
-GunMenuFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-GunMenuFrame.BorderSizePixel = 0
-GunMenuFrame.Position = UDim2.new(0.0294600651, 0, 0.0342679136, 0)
-GunMenuFrame.Size = UDim2.new(0, 449, 0, 300)
-
-UI4.Name = "UI 4"
-UI4.Parent = GunMenuFrame
-UI4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-UI4.BorderSizePixel = 0
-UI4.Position = UDim2.new(-0.0291263442, 0, -0.000917256693, 0)
-UI4.Size = UDim2.new(0, 476, 0, 14)
-UI4.Font = Enum.Font.SourceSans
-UI4.Text = ""
-UI4.TextColor3 = Color3.fromRGB(0, 0, 0)
-UI4.TextSize = 14.000
-
-GunMenuLabel.Name = "Gun Menu Label"
-GunMenuLabel.Parent = GunMenuFrame
-GunMenuLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-GunMenuLabel.BorderSizePixel = 0
-GunMenuLabel.Position = UDim2.new(-0.0291263442, 0, 0.0431893915, 0)
-GunMenuLabel.Size = UDim2.new(0, 476, 0, 34)
-GunMenuLabel.Font = Enum.Font.SourceSans
-GunMenuLabel.Text = "Gun Menu"
-GunMenuLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-GunMenuLabel.TextSize = 27.000
-
-CloseGunMenu.Name = "Close Gun Menu"
-CloseGunMenu.Parent = GunMenuFrame
-CloseGunMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-CloseGunMenu.BorderSizePixel = 0
-CloseGunMenu.Position = UDim2.new(0.969333649, 0, -0.0299999975, 0)
-CloseGunMenu.Size = UDim2.new(0, 26, 0, 30)
-CloseGunMenu.Font = Enum.Font.SourceSans
-CloseGunMenu.Text = "X"
-CloseGunMenu.TextColor3 = Color3.fromRGB(255, 255, 255)
-CloseGunMenu.TextSize = 28.000
-CloseGunMenu.MouseButton1Down:connect(function()
-	GunMenu.Visible = false
-	MainMenu.Visible = true
-end)
-
-NoRecoil.Name = "No Recoil"
-NoRecoil.Parent = GunMenuFrame
-NoRecoil.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-NoRecoil.BorderSizePixel = 0
-NoRecoil.Position = UDim2.new(0.365504831, 0, 0.251900405, 0)
-NoRecoil.Size = UDim2.new(0, 117, 0, 32)
-NoRecoil.Font = Enum.Font.SourceSans
-NoRecoil.Text = "No Recoil"
-NoRecoil.TextColor3 = Color3.fromRGB(0, 0, 0)
-NoRecoil.TextSize = 16.000
-NoRecoil.MouseButton1Down:connect(function()
-	game:GetService("ReplicatedStorage").Weapons.G17.Recoil:Destroy()
-	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].Recoil:Destroy()
-	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].Recoil:Destroy()
-	game:GetService("ReplicatedStorage").Weapons.M4A1.Recoil:Destroy()
-	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Recoil:Destroy()
-	game:GetService("ReplicatedStorage").Weapons["MAC-10"].Recoil:Destroy()
-	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].Recoil:Destroy()
-	game:GetService("ReplicatedStorage").Weapons.MP5.Recoil:Destroy()
-	game:GetService("ReplicatedStorage").Weapons.M1911.Recoil:Destroy()
-
-end)
-
-NoSpread.Name = "No Spread"
-NoSpread.Parent = GunMenuFrame
-NoSpread.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-NoSpread.BorderSizePixel = 0
-NoSpread.Position = UDim2.new(0.364359409, 0, 0.38856709, 0)
-NoSpread.Size = UDim2.new(0, 117, 0, 30)
-NoSpread.Font = Enum.Font.SourceSans
-NoSpread.Text = "No Spread"
-NoSpread.TextColor3 = Color3.fromRGB(0, 0, 0)
-NoSpread.TextSize = 16.000
-NoSpread.MouseButton1Down:connect(function()
-	game:GetService("ReplicatedStorage").Weapons.G17.Spread:Destroy()
-	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].Spread:Destroy()
-	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].Spread:Destroy()
-	game:GetService("ReplicatedStorage").Weapons.Knife.Spread:Destroy()
-	game:GetService("ReplicatedStorage").Weapons.Flashlight.Spread:Destroy()
-	game:GetService("ReplicatedStorage").Weapons.M4A1.Spread:Destroy()
-	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Spread:Destroy()
-	game:GetService("ReplicatedStorage").Weapons["MAC-10"].Spread:Destroy()
-	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].Spread:Destroy()
-	game:GetService("ReplicatedStorage").Weapons.MP5.Spread:Destroy()
-	game:GetService("ReplicatedStorage").Weapons.M1911.Spread:Destroy()
-end)
-
-PickUpIthaca37.Name = "Pick Up Ithaca37"
-PickUpIthaca37.Parent = GunMenuFrame
-PickUpIthaca37.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-PickUpIthaca37.BorderSizePixel = 0
-PickUpIthaca37.Position = UDim2.new(0.0336562991, 0, 0.525233746, 0)
-PickUpIthaca37.Size = UDim2.new(0, 117, 0, 32)
-PickUpIthaca37.Font = Enum.Font.SourceSans
-PickUpIthaca37.Text = "Pick Up Ithaca37"
-PickUpIthaca37.TextColor3 = Color3.fromRGB(0, 0, 0)
-PickUpIthaca37.TextSize = 16.000
-PickUpIthaca37.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "Pickup",
-			[2] = workspace.Map.Ignore["Ithaca 37"]
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-PickUpM4A1.Name = "Pick Up M4A1"
-PickUpM4A1.Parent = GunMenuFrame
-PickUpM4A1.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-PickUpM4A1.BorderSizePixel = 0
-PickUpM4A1.Position = UDim2.new(0.0347380191, 0, 0.255233616, 0)
-PickUpM4A1.Size = UDim2.new(0, 117, 0, 32)
-PickUpM4A1.Font = Enum.Font.SourceSans
-PickUpM4A1.Text = "Pick Up M4A1"
-PickUpM4A1.TextColor3 = Color3.fromRGB(0, 0, 0)
-PickUpM4A1.TextSize = 16.000
-PickUpM4A1.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "Pickup",
-			[2] = workspace.Map.Ignore.M4A1
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-PickUpMAC10.Name = "Pick Up MAC-10"
-PickUpMAC10.Parent = GunMenuFrame
-PickUpMAC10.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-PickUpMAC10.BorderSizePixel = 0
-PickUpMAC10.Position = UDim2.new(0.0343534946, 0, 0.39190039, 0)
-PickUpMAC10.Size = UDim2.new(0, 117, 0, 32)
-PickUpMAC10.Font = Enum.Font.SourceSans
-PickUpMAC10.Text = "Pick Up MAC-10"
-PickUpMAC10.TextColor3 = Color3.fromRGB(0, 0, 0)
-PickUpMAC10.TextSize = 16.000
-PickUpMAC10.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "Pickup",
-			[2] = workspace.Map.Ignore["MAC-10"]
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-PickUpAllGuns.Name = "Pick Up All Guns"
-PickUpAllGuns.Parent = GunMenuFrame
-PickUpAllGuns.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-PickUpAllGuns.BorderSizePixel = 0
-PickUpAllGuns.Position = UDim2.new(0.0329849124, 0, 0.661900401, 0)
-PickUpAllGuns.Size = UDim2.new(0, 117, 0, 32)
-PickUpAllGuns.Font = Enum.Font.SourceSans
-PickUpAllGuns.Text = "Pick Up All Guns"
-PickUpAllGuns.TextColor3 = Color3.fromRGB(0, 0, 0)
-PickUpAllGuns.TextSize = 16.000
-PickUpAllGuns.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "Pickup",
-			[2] = workspace.Map.Ignore.M4A1
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-	
-	wait(1)
-	
-	local args = {
-		[1] = {
-			[1] = "Pickup",
-			[2] = workspace.Map.Ignore["Ithaca 37"]
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-
-	wait(1)
-	
-	local args = {
-		[1] = {
-			[1] = "Pickup",
-			[2] = workspace.Map.Ignore["MAC-10"]
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-
-	wait(1)
-	
-	local args = {
-		[1] = {
-			[1] = "Pickup",
-			[2] = workspace.Map.Ignore["MAC-10"]
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-	
-	wait(1)
-	
-	local args = {
-		[1] = {
-			[1] = "Pickup",
-			[2] = workspace.Map.Ignore["Ithaca 37"]
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-	
-	wait(1)
-	
-	local args = {
-		[1] = {
-			[1] = "Pickup",
-			[2] = workspace.Map.Ignore.M4A1
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-ModAmmo.Name = "Mod Ammo"
-ModAmmo.Parent = GunMenuFrame
-ModAmmo.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-ModAmmo.BorderSizePixel = 0
-ModAmmo.Position = UDim2.new(0.364359409, 0, 0.525233805, 0)
-ModAmmo.Size = UDim2.new(0, 117, 0, 30)
-ModAmmo.Font = Enum.Font.SourceSans
-ModAmmo.Text = "Mod Ammo"
-ModAmmo.TextColor3 = Color3.fromRGB(0, 0, 0)
-ModAmmo.TextSize = 16.000
-ModAmmo.MouseButton1Down:connect(function()
-	game:GetService("ReplicatedStorage").Weapons.G17.Ammo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].Ammo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].Ammo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.M4A1.Ammo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Ammo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["MAC-10"].Ammo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].Ammo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.MP5.Ammo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.M1911.Ammo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.Flashlight.Ammo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.Knife.Ammo.Value = 1e+14
-end)
-
-FullAuto.Name = "Full Auto"
-FullAuto.Parent = GunMenuFrame
-FullAuto.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-FullAuto.BorderSizePixel = 0
-FullAuto.Position = UDim2.new(0.364359409, 0, 0.665233791, 0)
-FullAuto.Size = UDim2.new(0, 117, 0, 30)
-FullAuto.Font = Enum.Font.SourceSans
-FullAuto.Text = "Full Auto"
-FullAuto.TextColor3 = Color3.fromRGB(0, 0, 0)
-FullAuto.TextSize = 16.000
-FullAuto.MouseButton1Down:connect(function()
-	-----------
-	game:GetService("ReplicatedStorage").Weapons.G17.Auto.Value = true
-	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].Auto.Value = true
-	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].Auto.Value = true
-	game:GetService("ReplicatedStorage").Weapons.M4A1.Auto.Value = true
-	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Auto.Value = true
-	game:GetService("ReplicatedStorage").Weapons["MAC-10"].Auto.Value = true
-	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].Auto.Value = true
-	game:GetService("ReplicatedStorage").Weapons.MP5.Auto.Value = true
-	game:GetService("ReplicatedStorage").Weapons.M1911.Auto.Value = true
-end)
-
-ModFirerate.Name = "Mod Firerate"
-ModFirerate.Parent = GunMenuFrame
-ModFirerate.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-ModFirerate.BorderSizePixel = 0
-ModFirerate.Position = UDim2.new(0.702889502, 0, 0.668567121, 0)
-ModFirerate.Size = UDim2.new(0, 117, 0, 30)
-ModFirerate.Font = Enum.Font.SourceSans
-ModFirerate.Text = "Mod Firerate"
-ModFirerate.TextColor3 = Color3.fromRGB(0, 0, 0)
-ModFirerate.TextSize = 16.000
-ModFirerate.MouseButton1Down:connect(function()
-	game:GetService("ReplicatedStorage").Weapons.G17.FireRate.Value = 0.0001
-	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].FireRate.Value = 0.0001
-	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].FireRate.Value = 0.0001
-	game:GetService("ReplicatedStorage").Weapons.M4A1.FireRate.Value = 0.0001
-	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].FireRate.Value = 0.0001
-	game:GetService("ReplicatedStorage").Weapons["MAC-10"].FireRate.Value = 0.0001
-	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].FireRate.Value = 0.0001
-	game:GetService("ReplicatedStorage").Weapons.MP5.FireRate.Value = 0.0001
-	game:GetService("ReplicatedStorage").Weapons.M1911.FireRate.Value = 0.0001
-	game:GetService("ReplicatedStorage").Weapons.Flashlight.FireRate.Value = 0.0001
-	game:GetService("ReplicatedStorage").Weapons.Knife.FireRate.Value = 0.0001
-	wait(1)
-	game:GetService("ReplicatedStorage").Weapons.Flashlight.HitFrame.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.Knife.HitFrame.Value = 1e+14
-end)
-
-ModRange.Name = "Mod Range"
-ModRange.Parent = GunMenuFrame
-ModRange.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-ModRange.BorderSizePixel = 0
-ModRange.Position = UDim2.new(0.702889502, 0, 0.251900405, 0)
-ModRange.Size = UDim2.new(0, 117, 0, 30)
-ModRange.Font = Enum.Font.SourceSans
-ModRange.Text = "Mod Range"
-ModRange.TextColor3 = Color3.fromRGB(0, 0, 0)
-ModRange.TextSize = 16.000
-ModRange.MouseButton1Down:connect(function()
-	------------------------------------
-	game:GetService("ReplicatedStorage").Weapons.G17.RangeModifier.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].RangeModifier.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].RangeModifier.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.M4A1.RangeModifier.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].RangeModifier.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["MAC-10"].RangeModifier.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].RangeModifier.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.MP5.RangeModifier.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.M1911.RangeModifier.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.Flashlight.RangeModifier.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.Knife.RangeModifier.Value = 1e+14
-	
-	game:GetService("ReplicatedStorage").Weapons.G17.Range.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].Range.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].Range.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.M4A1.Range.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].Range.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["MAC-10"].Range.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].Range.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.MP5.Range.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.M1911.Range.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.Flashlight.Range.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.Knife.Range.Value = 1e+14
-end)
-
-ModReloadTime.Name = "Mod Reload Time"
-ModReloadTime.Parent = GunMenuFrame
-ModReloadTime.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-ModReloadTime.BorderSizePixel = 0
-ModReloadTime.Position = UDim2.new(0.702889502, 0, 0.38856706, 0)
-ModReloadTime.Size = UDim2.new(0, 117, 0, 30)
-ModReloadTime.Font = Enum.Font.SourceSans
-ModReloadTime.Text = "Mod Reload Time"
-ModReloadTime.TextColor3 = Color3.fromRGB(0, 0, 0)
-ModReloadTime.TextSize = 16.000
-ModReloadTime.MouseButton1Down:connect(function()
-	game:GetService("ReplicatedStorage").Weapons.G17.ReloadTime.Value = 0.001
-	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].ReloadTime.Value = 0.001
-	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].ReloadTime.Value = 0.001
-	game:GetService("ReplicatedStorage").Weapons.M4A1.ReloadTime.Value = 0.001
-	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].ReloadTime.Value = 0.001
-	game:GetService("ReplicatedStorage").Weapons["MAC-10"].ReloadTime.Value = 0.001
-	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].ReloadTime.Value = 0.001
-	game:GetService("ReplicatedStorage").Weapons.MP5.ReloadTime.Value = 0.001
-	game:GetService("ReplicatedStorage").Weapons.M1911.ReloadTime.Value = 0.001
-	game:GetService("ReplicatedStorage").Weapons.Flashlight.ReloadTime.Value = 0.001
-	game:GetService("ReplicatedStorage").Weapons.Knife.ReloadTime.Value = 0.001
-end)
-
-ModStoredAmmo.Name = "Mod Stored Ammo"
-ModStoredAmmo.Parent = GunMenuFrame
-ModStoredAmmo.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-ModStoredAmmo.BorderSizePixel = 0
-ModStoredAmmo.Position = UDim2.new(0.702889502, 0, 0.525233686, 0)
-ModStoredAmmo.Size = UDim2.new(0, 117, 0, 30)
-ModStoredAmmo.Font = Enum.Font.SourceSans
-ModStoredAmmo.Text = "Mod Stored Ammo"
-ModStoredAmmo.TextColor3 = Color3.fromRGB(0, 0, 0)
-ModStoredAmmo.TextSize = 16.000
-ModStoredAmmo.MouseButton1Down:connect(function()
-	game:GetService("ReplicatedStorage").Weapons.G17.StoredAmmo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Five-seveN"].StoredAmmo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Desert Eagle"].StoredAmmo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.M4A1.StoredAmmo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Ithaca 37"].StoredAmmo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["MAC-10"].StoredAmmo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons["Beretta M9-S"].StoredAmmo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.MP5.StoredAmmo.Value = 1e+14
-	game:GetService("ReplicatedStorage").Weapons.M1911.StoredAmmo.Value = 1e+14
-end)
-
-LightMenu.Name = "Light Menu"
-LightMenu.Parent = RobberMenuv4
-LightMenu.Active = true
-LightMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-LightMenu.BorderSizePixel = 0
-LightMenu.Position = UDim2.new(0.0348623395, 0, 0.428398013, 0)
-LightMenu.Size = UDim2.new(0, 364, 0, 321)
-LightMenu.Visible = false
-LightMenu.Draggable = true
-
-LightFrame.Name = "Light Frame"
-LightFrame.Parent = LightMenu
-LightFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-LightFrame.BorderSizePixel = 0
-LightFrame.Position = UDim2.new(0.0318013281, 0, 0.0305747148, 0)
-LightFrame.Size = UDim2.new(0, 343, 0, 301)
-
-LightMenuLabel.Name = "Light Menu Label"
-LightMenuLabel.Parent = LightFrame
-LightMenuLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-LightMenuLabel.BorderSizePixel = 0
-LightMenuLabel.Position = UDim2.new(-0.0337483473, 0, 0.0472893678, 0)
-LightMenuLabel.Size = UDim2.new(0, 364, 0, 34)
-LightMenuLabel.Font = Enum.Font.SourceSans
-LightMenuLabel.Text = "Light Menu"
-LightMenuLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-LightMenuLabel.TextSize = 27.000
-
-ToggleAllLights.Name = "Toggle All Lights"
-ToggleAllLights.Parent = LightFrame
-ToggleAllLights.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-ToggleAllLights.BorderSizePixel = 0
-ToggleAllLights.Position = UDim2.new(0.305582404, 0, 0.189666241, 0)
-ToggleAllLights.Size = UDim2.new(0, 131, 0, 32)
-ToggleAllLights.Font = Enum.Font.SourceSans
-ToggleAllLights.Text = "Toggle All Lights"
-ToggleAllLights.TextColor3 = Color3.fromRGB(0, 0, 0)
-ToggleAllLights.TextSize = 16.000
-ToggleAllLights.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "ToggleLight",
-			[2] = "AllLights"
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-BackOfMallLight.Name = "Back Of Mall Light"
-BackOfMallLight.Parent = LightFrame
-BackOfMallLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-BackOfMallLight.BorderSizePixel = 0
-BackOfMallLight.Position = UDim2.new(0.565054774, 0, 0.330067754, 0)
-BackOfMallLight.Size = UDim2.new(0, 131, 0, 32)
-BackOfMallLight.Font = Enum.Font.SourceSans
-BackOfMallLight.Text = "Back Of Mall Light"
-BackOfMallLight.TextColor3 = Color3.fromRGB(0, 0, 0)
-BackOfMallLight.TextSize = 16.000
-BackOfMallLight.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "ToggleLight",
-			[2] = "Back of mall"
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-StorageRoomLight.Name = "Storage Room Light"
-StorageRoomLight.Parent = LightFrame
-StorageRoomLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-StorageRoomLight.BorderSizePixel = 0
-StorageRoomLight.Position = UDim2.new(0.565054774, 0, 0.492858469, 0)
-StorageRoomLight.Size = UDim2.new(0, 131, 0, 32)
-StorageRoomLight.Font = Enum.Font.SourceSans
-StorageRoomLight.Text = "Storage Room Light"
-StorageRoomLight.TextColor3 = Color3.fromRGB(0, 0, 0)
-StorageRoomLight.TextSize = 16.000
-StorageRoomLight.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "ToggleLight",
-			[2] = "Storage Room"
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-CrossroadsLight.Name = "Crossroads Light"
-CrossroadsLight.Parent = LightFrame
-CrossroadsLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-CrossroadsLight.BorderSizePixel = 0
-CrossroadsLight.Position = UDim2.new(0.0519380681, 0, 0.332523346, 0)
-CrossroadsLight.Size = UDim2.new(0, 131, 0, 32)
-CrossroadsLight.Font = Enum.Font.SourceSans
-CrossroadsLight.Text = "Crossroads Light"
-CrossroadsLight.TextColor3 = Color3.fromRGB(0, 0, 0)
-CrossroadsLight.TextSize = 16.000
-CrossroadsLight.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "ToggleLight",
-			[2] = "Crossroads"
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-WingLight.Name = "Wing Light"
-WingLight.Parent = LightFrame
-WingLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-WingLight.BorderSizePixel = 0
-WingLight.Position = UDim2.new(0.567614496, 0, 0.658971488, 0)
-WingLight.Size = UDim2.new(0, 131, 0, 32)
-WingLight.Font = Enum.Font.SourceSans
-WingLight.Text = "Wing Light"
-WingLight.TextColor3 = Color3.fromRGB(0, 0, 0)
-WingLight.TextSize = 16.000
-WingLight.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "ToggleLight",
-			[2] = "Wing"
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-BackroomLight.Name = "Backroom Light"
-BackroomLight.Parent = LightFrame
-BackroomLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-BackroomLight.BorderSizePixel = 0
-BackroomLight.Position = UDim2.new(0.0515822694, 0, 0.495314121, 0)
-BackroomLight.Size = UDim2.new(0, 131, 0, 32)
-BackroomLight.Font = Enum.Font.SourceSans
-BackroomLight.Text = "Backroom Light"
-BackroomLight.TextColor3 = Color3.fromRGB(0, 0, 0)
-BackroomLight.TextSize = 16.000
-BackroomLight.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "ToggleLight",
-			[2] = "Backroom"
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-DownstairsLight.Name = "Downstairs Light"
-DownstairsLight.Parent = LightFrame
-DownstairsLight.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-DownstairsLight.BorderSizePixel = 0
-DownstairsLight.Position = UDim2.new(0.0494952276, 0, 0.658971429, 0)
-DownstairsLight.Size = UDim2.new(0, 131, 0, 32)
-DownstairsLight.Font = Enum.Font.SourceSans
-DownstairsLight.Text = "Downstairs Light"
-DownstairsLight.TextColor3 = Color3.fromRGB(0, 0, 0)
-DownstairsLight.TextSize = 16.000
-DownstairsLight.MouseButton1Down:connect(function()
-	local args = {
-		[1] = {
-			[1] = "ToggleLight",
-			[2] = "Downstairs"
-		}
-	}
-
-	game:GetService("ReplicatedStorage").Events.RemoteEvent:FireServer(unpack(args))
-end)
-
-UI5.Name = "UI 5"
-UI5.Parent = LightMenu
-UI5.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-UI5.BorderSizePixel = 0
-UI5.Size = UDim2.new(0, 364, 0, 29)
-UI5.Font = Enum.Font.SourceSans
-UI5.Text = ""
-UI5.TextColor3 = Color3.fromRGB(0, 0, 0)
-UI5.TextSize = 14.000
-
-CloseLightMenu.Name = "Close Light Menu"
-CloseLightMenu.Parent = LightMenu
-CloseLightMenu.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-CloseLightMenu.BorderSizePixel = 0
-CloseLightMenu.Position = UDim2.new(0.92286396, 0, 0.0031152647, 0)
-CloseLightMenu.Size = UDim2.new(0, 26, 0, 29)
-CloseLightMenu.Font = Enum.Font.SourceSans
-CloseLightMenu.Text = "X"
-CloseLightMenu.TextColor3 = Color3.fromRGB(255, 255, 255)
-CloseLightMenu.TextSize = 28.000
-CloseLightMenu.MouseButton1Down:connect(function()
-	LightMenu.Visible = false
-	MainMenu.Visible = true
-end)
+UIv2.Name = "UI v2"
+UIv2.Parent = MainMenu
+UIv2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv2.BorderSizePixel = 0
+UIv2.Size = UDim2.new(0, 477, 0, 3)
+UIv2.Font = Enum.Font.SourceSans
+UIv2.Text = ""
+UIv2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv2.TextSize = 14.000
+
+UIv3_2.Name = "UI v3"
+UIv3_2.Parent = MainMenu
+UIv3_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv3_2.BorderSizePixel = 0
+UIv3_2.Position = UDim2.new(0, 0, 0.99065423, 0)
+UIv3_2.Size = UDim2.new(0, 477, 0, 3)
+UIv3_2.Font = Enum.Font.SourceSans
+UIv3_2.Text = ""
+UIv3_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv3_2.TextSize = 14.000
+
+UIv4_3.Name = "UI v4"
+UIv4_3.Parent = MainMenu
+UIv4_3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv4_3.BorderSizePixel = 0
+UIv4_3.Position = UDim2.new(0.993710697, 0, 0.00311512221, 0)
+UIv4_3.Size = UDim2.new(0, 3, 0, 320)
+UIv4_3.Font = Enum.Font.SourceSans
+UIv4_3.Text = ""
+UIv4_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv4_3.TextSize = 14.000
+
+UIv5_3.Name = "UI v5"
+UIv5_3.Parent = MainMenu
+UIv5_3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+UIv5_3.BorderSizePixel = 0
+UIv5_3.Position = UDim2.new(0, 0, -1.42492354e-07, 0)
+UIv5_3.Size = UDim2.new(0, 3, 0, 318)
+UIv5_3.Font = Enum.Font.SourceSans
+UIv5_3.Text = ""
+UIv5_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+UIv5_3.TextSize = 14.000
+
+
+
+local function HPSC_fake_script() -- UIv3.RGB 
+	local script = Instance.new('LocalScript', UIv3)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(HPSC_fake_script)()
+local function PNBPB_fake_script() -- UIv4.RGB 
+	local script = Instance.new('LocalScript', UIv4)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(PNBPB_fake_script)()
+local function NVNTAG_fake_script() -- UIv5.RGB 
+	local script = Instance.new('LocalScript', UIv5)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(NVNTAG_fake_script)()
+local function QHWHM_fake_script() -- UIv6.RGB 
+	local script = Instance.new('LocalScript', UIv6)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(QHWHM_fake_script)()
+local function RIOET_fake_script() -- UIv6_2.RGB 
+	local script = Instance.new('LocalScript', UIv6_2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(RIOET_fake_script)()
+local function OVHEMHY_fake_script() -- UIv7.RGB 
+	local script = Instance.new('LocalScript', UIv7)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(OVHEMHY_fake_script)()
+local function GRDYSMP_fake_script() -- UIv8.RGB 
+	local script = Instance.new('LocalScript', UIv8)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(GRDYSMP_fake_script)()
+local function WYGRT_fake_script() -- UIv9.RGB 
+	local script = Instance.new('LocalScript', UIv9)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(WYGRT_fake_script)()
+local function NTUHIOZ_fake_script() -- UIv6_3.RGB 
+	local script = Instance.new('LocalScript', UIv6_3)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(NTUHIOZ_fake_script)()
+local function HMHQGBO_fake_script() -- UIv7_2.RGB 
+	local script = Instance.new('LocalScript', UIv7_2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(HMHQGBO_fake_script)()
+local function WALXMSS_fake_script() -- UIv8_2.RGB 
+	local script = Instance.new('LocalScript', UIv8_2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(WALXMSS_fake_script)()
+local function FBXXR_fake_script() -- UIv9_2.RGB 
+	local script = Instance.new('LocalScript', UIv9_2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(FBXXR_fake_script)()
+local function XGWRZAG_fake_script() -- UIv4_2.RGB 
+	local script = Instance.new('LocalScript', UIv4_2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(XGWRZAG_fake_script)()
+local function VTVYWN_fake_script() -- UIv5_2.RGB 
+	local script = Instance.new('LocalScript', UIv5_2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(VTVYWN_fake_script)()
+local function DXXQYE_fake_script() -- UIv6_4.RGB 
+	local script = Instance.new('LocalScript', UIv6_4)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(DXXQYE_fake_script)()
+local function RPBD_fake_script() -- UIv7_3.RGB 
+	local script = Instance.new('LocalScript', UIv7_3)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(RPBD_fake_script)()
+local function SOBZQ_fake_script() -- UIv2.RGB 
+	local script = Instance.new('LocalScript', UIv2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(SOBZQ_fake_script)()
+local function ZYTGL_fake_script() -- UIv3_2.RGB 
+	local script = Instance.new('LocalScript', UIv3_2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(ZYTGL_fake_script)()
+local function YHJET_fake_script() -- UIv4_3.RGB 
+	local script = Instance.new('LocalScript', UIv4_3)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(YHJET_fake_script)()
+local function RKHU_fake_script() -- UIv5_3.RGB 
+	local script = Instance.new('LocalScript', UIv5_3)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.0001
+	end
+end
+coroutine.wrap(RKHU_fake_script)()
