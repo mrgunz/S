@@ -96,16 +96,16 @@ LoadButton.MouseButton1Click:Connect(function()
 		end
 		
 		
-		-------Robbery (Story)
-		if game.PlaceId==5548533908 then
-			lo("https://raw.githubusercontent.com/mrgunz/S/main/Robbery")
-		end
+
+--------if nouni==false then
+	------		lo("https://raw.githubusercontent.com/mrgunz/S/main/Robbery")
+	-----	end
 		
 		
 		
 		
 		if nouni==false then
-			lo("https://raw.githubusercontent.com/inceldom/kinx/main/uni")
+			print "2"
 		end
 
 	end
