@@ -1,0 +1,370 @@
+for i,v in pairs(game:GetService("CoreGui"):GetChildren()) do
+	if v.Name == "Loader" then
+		v:Destroy()
+	end
+end
+
+local Loader = Instance.new("ScreenGui")
+local MainMenu = Instance.new("Frame")
+local MainFrame = Instance.new("Frame")
+local MoreButton = Instance.new("TextButton")
+local LoadButton = Instance.new("TextButton")
+local UI1 = Instance.new("TextLabel")
+local UI2 = Instance.new("TextLabel")
+local MenuLabel = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
+local MoreMenu = Instance.new("Frame")
+local CloseButton = Instance.new("TextButton")
+local MenuLabel_2 = Instance.new("TextLabel")
+local List = Instance.new("TextLabel")
+
+
+
+Loader.Name = "Loader"
+Loader.Parent = game.CoreGui
+
+MainMenu.Name = "Main Menu"
+MainMenu.Parent = Loader
+MainMenu.Active = true
+MainMenu.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MainMenu.BorderSizePixel = 0
+MainMenu.Position = UDim2.new(0.0965323374, 0, 0.400390625, 0)
+MainMenu.Size = UDim2.new(0, 258, 0, 108)
+MainMenu.Draggable = true
+
+MainFrame.Name = "Main Frame"
+MainFrame.Parent = MainMenu
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.0232558139, 0, 0.190370351, 0)
+MainFrame.Size = UDim2.new(0, 246, 0, 80)
+
+MoreButton.Name = "More Button"
+MoreButton.Parent = MainFrame
+MoreButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MoreButton.BorderColor3 = Color3.fromRGB(40, 40, 40)
+MoreButton.BorderSizePixel = 0
+MoreButton.Position = UDim2.new(0.869918704, 0, 0.741166711, 0)
+MoreButton.Size = UDim2.new(0, 31, 0, 20)
+MoreButton.Font = Enum.Font.SourceSans
+MoreButton.Text = "More"
+MoreButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MoreButton.TextSize = 14.000
+MoreButton.MouseButton1Click:Connect(function()
+	MainMenu.Visible = false
+	MoreMenu.Visible = true
+end)
+
+LoadButton.Name = "Load Button"
+LoadButton.Parent = MainFrame
+LoadButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+LoadButton.BorderColor3 = Color3.fromRGB(40, 40, 40)
+LoadButton.BorderSizePixel = 0
+LoadButton.Position = UDim2.new(0.0934959352, 0, 0.253666699, 0)
+LoadButton.Size = UDim2.new(0, 199, 0, 39)
+LoadButton.Font = Enum.Font.SciFi
+LoadButton.Text = "Ready"
+LoadButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadButton.TextSize = 20.000
+LoadButton.MouseButton1Click:Connect(function()
+	local button = LoadButton
+	local on = false
+	on = not on
+	if on then
+		LoadButton.Text = "Please Wait Loading..."
+		warn("Please Wait Loading...")
+
+		nouni=false
+		local function lo(l)
+			loadstring(game:HttpGet(l,true))()
+			nouni=true
+		end
+		if game.PlaceId==876052679 then
+			lo("https://raw.githubusercontent.com/mrgunz/S/main/9")
+		end
+
+		--------------- No-Scope Sniping
+		if game.PlaceId==5081773298 then
+			lo("https://raw.githubusercontent.com/inceldom/kinx/main/pf")
+		end
+		
+		
+		
+		if game.PlaceId==1962086868 then
+			lo("https://raw.githubusercontent.com/inceldom/kinx/main/toh")
+		end
+		if game.PlaceId==155615604 then
+			lo("https://raw.githubusercontent.com/inceldom/kinx/main/pl")
+		end
+		if game.PlaceId==1537690962 then
+			lo("https://raw.githubusercontent.com/inceldom/kinx/main/bss")
+		end
+		if game.PlaceId==3101667897 then
+			lo("https://raw.githubusercontent.com/inceldom/kinx/main/los")
+		end
+		if game.PlaceId==142823291 then
+			lo("https://raw.githubusercontent.com/inceldom/kinx/main/mm2")
+		end
+		if nouni==false then
+			lo("https://raw.githubusercontent.com/inceldom/kinx/main/uni")
+		end
+
+	end
+	game:GetService("CoreGui")["Loader"]:Destroy()
+end)
+
+UI1.Name = "UI 1"
+UI1.Parent = LoadButton
+UI1.Active = true
+UI1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UI1.BorderSizePixel = 0
+UI1.Position = UDim2.new(0.984962523, 0, 0.15384616, 0)
+UI1.Size = UDim2.new(0, 1, 0, 26)
+UI1.Font = Enum.Font.SourceSans
+UI1.Text = ""
+UI1.TextColor3 = Color3.fromRGB(0, 0, 0)
+UI1.TextSize = 14.000
+
+UI2.Name = "UI 2"
+UI2.Parent = LoadButton
+UI2.Active = true
+UI2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UI2.BorderSizePixel = 0
+UI2.Position = UDim2.new(0, 0, 0.15384616, 0)
+UI2.Size = UDim2.new(0, 1, 0, 26)
+UI2.Font = Enum.Font.SourceSans
+UI2.Text = ""
+UI2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UI2.TextSize = 14.000
+
+MenuLabel.Name = "Menu Label"
+MenuLabel.Parent = MainMenu
+MenuLabel.Active = true
+MenuLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MenuLabel.BackgroundTransparency = 1.000
+MenuLabel.BorderSizePixel = 0
+MenuLabel.Position = UDim2.new(0.147286817, 0, 0, 0)
+MenuLabel.Size = UDim2.new(0, 182, 0, 20)
+MenuLabel.Font = Enum.Font.SciFi
+MenuLabel.Text = "Mr gunz Hub"
+MenuLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+MenuLabel.TextSize = 14.000
+
+Exit.Name = "Exit"
+Exit.Parent = MainMenu
+Exit.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.926356614, 0, 0, 0)
+Exit.Size = UDim2.new(0, 19, 0, 20)
+Exit.Font = Enum.Font.SciFi
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextSize = 21.000
+Exit.MouseButton1Click:Connect(function()
+
+	bc = BrickColor.new("White")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "Removing Loader";
+		Font = Enum.Font.SourceSans;
+		Color = bc.Color;
+		FontSize = Enum.FontSize.Size9;
+	})
+
+	game:GetService("CoreGui")["Loader"]:Destroy()
+end)
+
+MoreMenu.Name = "More Menu"
+MoreMenu.Parent = Loader
+MoreMenu.Active = true
+MoreMenu.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MoreMenu.BorderSizePixel = 0
+MoreMenu.Position = UDim2.new(0.095333159, 0, 0.400390625, 0)
+MoreMenu.Size = UDim2.new(0, 258, 0, 108)
+MoreMenu.Visible = false
+MoreMenu.Draggable = true
+
+CloseButton.Name = "Close Button"
+CloseButton.Parent = MoreMenu
+CloseButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+CloseButton.BorderSizePixel = 0
+CloseButton.Position = UDim2.new(0.914728701, 0, 0, 0)
+CloseButton.Size = UDim2.new(0, 22, 0, 20)
+CloseButton.Font = Enum.Font.SciFi
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextSize = 21.000
+CloseButton.MouseButton1Click:Connect(function()
+	MainMenu.Visible = true
+	MoreMenu.Visible = false
+	print("Hide.")
+end)
+
+MenuLabel_2.Name = "Menu Label"
+MenuLabel_2.Parent = MoreMenu
+MenuLabel_2.Active = true
+MenuLabel_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MenuLabel_2.BorderSizePixel = 0
+MenuLabel_2.Size = UDim2.new(0, 236, 0, 20)
+MenuLabel_2.Font = Enum.Font.SciFi
+MenuLabel_2.Text = "Games"
+MenuLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+MenuLabel_2.TextSize = 14.000
+
+List.Name = "List"
+List.Parent = MoreMenu
+List.Active = true
+List.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+List.BorderColor3 = Color3.fromRGB(255, 255, 255)
+List.BorderSizePixel = 0
+List.Position = UDim2.new(0, 0, 0.185185179, 0)
+List.Size = UDim2.new(0, 258, 0, 88)
+List.Font = Enum.Font.SourceSans
+List.Text = "No Scope Sniping,  Rocitizens,  Robery (Story),   KAT,  Robber,  Caliber | Gun Demo,  No-Scope Arcade"
+List.TextColor3 = Color3.fromRGB(255, 255, 255)
+List.TextSize = 15.000
+List.TextWrapped = true
+List.TextYAlignment = Enum.TextYAlignment.Top
+
+warn("Made By Mrgunz#2289")
+
+local function XMMSWD_fake_script() -- MoreButton.More Button RGB 
+	local script = Instance.new('LocalScript', MoreButton)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.001
+	end
+
+end
+coroutine.wrap(XMMSWD_fake_script)()
+local function XIZUU_fake_script() -- LoadButton.Load Button RGB 
+	local script = Instance.new('LocalScript', LoadButton)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.001
+	end
+
+end
+coroutine.wrap(XIZUU_fake_script)()
+local function MMRM_fake_script() -- UI1.UI 1 RGB  
+	local script = Instance.new('LocalScript', UI1)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter +0.001
+	end
+
+	print ("Ready Button Loaded.")
+end
+coroutine.wrap(MMRM_fake_script)()
+local function TEWM_fake_script() -- UI2.UI 2 RGB  
+	local script = Instance.new('LocalScript', UI2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.001
+	end
+
+
+end
+coroutine.wrap(TEWM_fake_script)()
+local function BKXU_fake_script() -- MenuLabel.RGB 
+	local script = Instance.new('LocalScript', MenuLabel)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.001
+	end
+
+end
+coroutine.wrap(BKXU_fake_script)()
+local function URRYJRH_fake_script() -- Exit.Exit RGB 
+	local script = Instance.new('LocalScript', Exit)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.001
+	end
+
+end
+coroutine.wrap(URRYJRH_fake_script)()
+local function MLRYN_fake_script() -- CloseButton.Close RGB 
+	local script = Instance.new('LocalScript', CloseButton)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.001
+	end
+
+end
+coroutine.wrap(MLRYN_fake_script)()
+local function JMFMZCQ_fake_script() -- MenuLabel_2.RGB 
+	local script = Instance.new('LocalScript', MenuLabel_2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.001
+	end
+
+end
+coroutine.wrap(JMFMZCQ_fake_script)()
+local function RQCNX_fake_script() -- List.RGB 
+	local script = Instance.new('LocalScript', List)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+	counter = 0
+
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+		counter = counter + 0.001
+	end
+
+end
+coroutine.wrap(RQCNX_fake_script)()
+
+
+warn("Loaded")
