@@ -1,0 +1,624 @@
+print "Made By Mrgunz#2289"
+print "P To Hide/Show"
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Robbery (Story)";
+	Text = "P To Hide/Show";
+	Duration = 5;
+})
+
+wait(2)
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Robbery (Story) Loading";
+	Text = "Made By Mrgunz#2289";
+	Duration = 5;
+})
+
+
+
+local RobberyStoryv1 = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local _2ndFrame = Instance.new("Frame")
+local MenuLabel = Instance.new("TextLabel")
+local Looppickupgold = Instance.new("TextButton")
+local pickupgold = Instance.new("TextButton")
+local Loopdeliveredgold = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local GetApple = Instance.new("TextButton")
+local deliveredgold = Instance.new("TextButton")
+local boardUpWindow = Instance.new("TextButton")
+local GetHammer = Instance.new("TextButton")
+local openMainEntrance = Instance.new("TextButton")
+local GetCookie = Instance.new("TextButton")
+local Potion = Instance.new("TextButton")
+local Medkit = Instance.new("TextButton")
+local Chips = Instance.new("TextButton")
+local BloxyCola = Instance.new("TextButton")
+local WalkspeedPowerJump = Instance.new("TextButton")
+local openBasementHatch = Instance.new("TextButton")
+local Badges = Instance.new("TextLabel")
+local WoodenPlank = Instance.new("TextButton")
+local CrowBar = Instance.new("TextButton")
+local UI1 = Instance.new("TextLabel")
+local SettingsIcon = Instance.new("ImageButton")
+local Settings = Instance.new("Frame")
+local SettingsFrame = Instance.new("Frame")
+local SettingsLabel = Instance.new("TextLabel")
+local DeleteMenuButton = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local asFXgt3gaxfg = Instance.new("TextLabel")
+local asFXgt3gaxfg_2 = Instance.new("TextLabel")
+local PHideShow = Instance.new("TextLabel")
+local UI2 = Instance.new("TextLabel")
+local CloseSettings = Instance.new("TextButton")
+
+
+wait(6)
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Robbery (Story) Loaded";
+	Text = "Made By Mrgunz#2289";
+	Duration = 30;
+})
+
+RobberyStoryv1.Name = "Robbery (Story) v1"
+RobberyStoryv1.Parent = game.CoreGui
+
+MainFrame.Name = "Main Frame"
+MainFrame.Parent = RobberyStoryv1
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.00489296624, 0, 0.0412621535, 0)
+MainFrame.Size = UDim2.new(0, 516, 0, 784)
+MainFrame.Draggable = true
+game:GetService("UserInputService").InputBegan:connect(function(input, gameProcessed)
+	if input.KeyCode == Enum.KeyCode.P then
+		if not gameProcessed then
+			RobberyStoryv1.Enabled = not RobberyStoryv1.Enabled
+		end
+	end
+end)
+_2ndFrame.Name = "2nd Frame"
+_2ndFrame.Parent = MainFrame
+_2ndFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+_2ndFrame.BorderSizePixel = 0
+_2ndFrame.Position = UDim2.new(0.0168040674, 0, 0.0311526861, 0)
+_2ndFrame.Size = UDim2.new(0, 498, 0, 748)
+
+MenuLabel.Name = "Menu Label"
+MenuLabel.Parent = _2ndFrame
+MenuLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MenuLabel.BorderSizePixel = 0
+MenuLabel.Position = UDim2.new(-0.0174114425, 0, 0.0179402046, 0)
+MenuLabel.Size = UDim2.new(0, 515, 0, 34)
+MenuLabel.Font = Enum.Font.SourceSans
+MenuLabel.Text = "Menu"
+MenuLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+MenuLabel.TextSize = 27.000
+
+Looppickupgold.Name = "Loop pick up gold"
+Looppickupgold.Parent = _2ndFrame
+Looppickupgold.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Looppickupgold.BorderSizePixel = 0
+Looppickupgold.Position = UDim2.new(0.381374568, 0, 0.0871383995, 0)
+Looppickupgold.Size = UDim2.new(0, 117, 0, 32)
+Looppickupgold.Font = Enum.Font.SourceSans
+Looppickupgold.Text = "Loop pick up gold"
+Looppickupgold.TextColor3 = Color3.fromRGB(0, 0, 0)
+Looppickupgold.TextSize = 14.000
+Looppickupgold.MouseButton1Down:connect(function()
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Robbery (Story) ";
+		Text = "L To Stop";
+		Duration = 4;
+	})
+	repeat wait()
+		local args = {
+			[1] = "pickupGold",
+			[2] = workspace.debris.Bank.Interactables.Gold.Carrier.GoldBars.GoldBar
+		}
+
+		game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
+end)
+
+pickupgold.Name = "pick up gold"
+pickupgold.Parent = _2ndFrame
+pickupgold.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+pickupgold.BorderSizePixel = 0
+pickupgold.Position = UDim2.new(0.0161779225, 0, 0.0871383995, 0)
+pickupgold.Size = UDim2.new(0, 117, 0, 32)
+pickupgold.Font = Enum.Font.SourceSans
+pickupgold.Text = "pick up Gold"
+pickupgold.TextColor3 = Color3.fromRGB(0, 0, 0)
+pickupgold.TextSize = 14.000
+pickupgold.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "pickupGold",
+		[2] = workspace.debris.Bank.Interactables.Gold.Carrier.GoldBars.GoldBar
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+Loopdeliveredgold.Name = "Loop delivered gold"
+Loopdeliveredgold.Parent = _2ndFrame
+Loopdeliveredgold.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Loopdeliveredgold.BorderSizePixel = 0
+Loopdeliveredgold.Position = UDim2.new(0.726579309, 0, 0.0871383995, 0)
+Loopdeliveredgold.Size = UDim2.new(0, 117, 0, 32)
+Loopdeliveredgold.Font = Enum.Font.SourceSans
+Loopdeliveredgold.Text = "Loop delivered gold"
+Loopdeliveredgold.TextColor3 = Color3.fromRGB(0, 0, 0)
+Loopdeliveredgold.TextSize = 14.000
+Loopdeliveredgold.MouseButton1Down:connect(function()
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Robbery (Story) ";
+		Text = "L To Stop";
+		Duration = 5;
+	})
+	repeat wait()
+
+		local args = {
+			[1] = "deliveredGold"
+		}
+
+		game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+	until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.L)
+end)
+
+TextLabel.Parent = _2ndFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.906241059, 0, 0.969042599, 0)
+TextLabel.Size = UDim2.new(0, 46, 0, 23)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "v1"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 15.000
+
+GetApple.Name = "Get Apple"
+GetApple.Parent = _2ndFrame
+GetApple.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+GetApple.BorderSizePixel = 0
+GetApple.Position = UDim2.new(0.726579309, 0, 0.147298828, 0)
+GetApple.Size = UDim2.new(0, 117, 0, 32)
+GetApple.Font = Enum.Font.SourceSans
+GetApple.Text = "Get Apple"
+GetApple.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetApple.TextSize = 14.000
+GetApple.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "giveItem",
+		[2] = "Apple"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+deliveredgold.Name = "delivered gold"
+deliveredgold.Parent = _2ndFrame
+deliveredgold.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+deliveredgold.BorderSizePixel = 0
+deliveredgold.Position = UDim2.new(0.0161779225, 0, 0.147298828, 0)
+deliveredgold.Size = UDim2.new(0, 117, 0, 32)
+deliveredgold.Font = Enum.Font.SourceSans
+deliveredgold.Text = "delivered gold"
+deliveredgold.TextColor3 = Color3.fromRGB(0, 0, 0)
+deliveredgold.TextSize = 14.000
+deliveredgold.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "deliveredGold"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+end)
+
+
+boardUpWindow.Name = "board Up Window"
+boardUpWindow.Parent = _2ndFrame
+boardUpWindow.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+boardUpWindow.BorderSizePixel = 0
+boardUpWindow.Position = UDim2.new(0.381374568, 0, 0.147298828, 0)
+boardUpWindow.Size = UDim2.new(0, 117, 0, 32)
+boardUpWindow.Font = Enum.Font.SourceSans
+boardUpWindow.Text = "board Up Window"
+boardUpWindow.TextColor3 = Color3.fromRGB(0, 0, 0)
+boardUpWindow.TextSize = 14.000
+boardUpWindow.MouseButton1Down:connect(function()
+
+
+	local args = {
+		[1] = "boardUpWindow",
+		[2] = workspace.debris.Warehouse.Windows.Window
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+GetHammer.Name = "Get Hammer"
+GetHammer.Parent = _2ndFrame
+GetHammer.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+GetHammer.BorderSizePixel = 0
+GetHammer.Position = UDim2.new(0.726579309, 0, 0.207459256, 0)
+GetHammer.Size = UDim2.new(0, 117, 0, 32)
+GetHammer.Font = Enum.Font.SourceSans
+GetHammer.Text = "Hammer"
+GetHammer.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetHammer.TextSize = 14.000
+GetHammer.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "giveItem",
+		[2] = "Hammer"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+openMainEntrance.Name = "open Main Entrance"
+openMainEntrance.Parent = _2ndFrame
+openMainEntrance.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+openMainEntrance.BorderSizePixel = 0
+openMainEntrance.Position = UDim2.new(0.0161779225, 0, 0.207459256, 0)
+openMainEntrance.Size = UDim2.new(0, 117, 0, 32)
+openMainEntrance.Font = Enum.Font.SourceSans
+openMainEntrance.Text = "open Main Entrance"
+openMainEntrance.TextColor3 = Color3.fromRGB(0, 0, 0)
+openMainEntrance.TextSize = 14.000
+openMainEntrance.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "openMainEntrance"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+GetCookie.Name = "Get Cookie"
+GetCookie.Parent = _2ndFrame
+GetCookie.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+GetCookie.BorderSizePixel = 0
+GetCookie.Position = UDim2.new(0.381374568, 0, 0.207459256, 0)
+GetCookie.Size = UDim2.new(0, 117, 0, 32)
+GetCookie.Font = Enum.Font.SourceSans
+GetCookie.Text = "Get Cookie"
+GetCookie.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetCookie.TextSize = 14.000
+GetCookie.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "giveItem",
+		[2] = "Cookie"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+Potion.Name = "Potion"
+Potion.Parent = _2ndFrame
+Potion.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Potion.BorderSizePixel = 0
+Potion.Position = UDim2.new(0.726579309, 0, 0.263608992, 0)
+Potion.Size = UDim2.new(0, 117, 0, 32)
+Potion.Font = Enum.Font.SourceSans
+Potion.Text = "Potion"
+Potion.TextColor3 = Color3.fromRGB(0, 0, 0)
+Potion.TextSize = 14.000
+Potion.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "giveItem",
+		[2] = "Potion"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+Medkit.Name = "Medkit"
+Medkit.Parent = _2ndFrame
+Medkit.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Medkit.BorderSizePixel = 0
+Medkit.Position = UDim2.new(0.0161779225, 0, 0.263608992, 0)
+Medkit.Size = UDim2.new(0, 117, 0, 32)
+Medkit.Font = Enum.Font.SourceSans
+Medkit.Text = "Medkit"
+Medkit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Medkit.TextSize = 14.000
+Medkit.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "giveItem",
+		[2] = "Medkit"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+Chips.Name = "Chips"
+Chips.Parent = _2ndFrame
+Chips.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Chips.BorderSizePixel = 0
+Chips.Position = UDim2.new(0.381374568, 0, 0.263608992, 0)
+Chips.Size = UDim2.new(0, 117, 0, 32)
+Chips.Font = Enum.Font.SourceSans
+Chips.Text = "Chips"
+Chips.TextColor3 = Color3.fromRGB(0, 0, 0)
+Chips.TextSize = 14.000
+Chips.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "giveItem",
+		[2] = "Chips"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+BloxyCola.Name = "Bloxy Cola"
+BloxyCola.Parent = _2ndFrame
+BloxyCola.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+BloxyCola.BorderSizePixel = 0
+BloxyCola.Position = UDim2.new(0.726579309, 0, 0.322432518, 0)
+BloxyCola.Size = UDim2.new(0, 117, 0, 32)
+BloxyCola.Font = Enum.Font.SourceSans
+BloxyCola.Text = "Bloxy Cola"
+BloxyCola.TextColor3 = Color3.fromRGB(0, 0, 0)
+BloxyCola.TextSize = 14.000
+BloxyCola.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "giveItem",
+		[2] = "BloxyCola"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+WalkspeedPowerJump.Name = "Walk speed Power Jump"
+WalkspeedPowerJump.Parent = _2ndFrame
+WalkspeedPowerJump.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+WalkspeedPowerJump.BorderSizePixel = 0
+WalkspeedPowerJump.Position = UDim2.new(0.0161779225, 0, 0.322432518, 0)
+WalkspeedPowerJump.Size = UDim2.new(0, 117, 0, 32)
+WalkspeedPowerJump.Font = Enum.Font.SourceSans
+WalkspeedPowerJump.Text = "Walk speed Power Jump"
+WalkspeedPowerJump.TextColor3 = Color3.fromRGB(0, 0, 0)
+WalkspeedPowerJump.TextSize = 13.000
+WalkspeedPowerJump.MouseButton1Down:connect(function()
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Robbery (Story) ";
+		Text = "Walkspeed and jumpheight (hold shift)";
+		Duration = 30;
+	})
+
+	local uis = game:GetService("UserInputService")
+	local plr = game:GetService("Players").LocalPlayer
+	uis.InputBegan:Connect(function(input)
+		if input.KeyCode == Enum.KeyCode.LeftShift then
+			plr.Character.Humanoid.WalkSpeed = 40
+			plr.Character.Humanoid.JumpPower = 70
+		end
+	end)
+	uis.InputEnded:Connect(function(input)
+		if input.KeyCode == Enum.KeyCode.LeftShift then
+			plr.Character.Humanoid.WalkSpeed = 16
+			plr.Character.Humanoid.JumpPower = 50
+		end
+	end)
+
+end)
+
+openBasementHatch.Name = "open Basement Hatch"
+openBasementHatch.Parent = _2ndFrame
+openBasementHatch.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+openBasementHatch.BorderSizePixel = 0
+openBasementHatch.Position = UDim2.new(0.381374568, 0, 0.322432518, 0)
+openBasementHatch.Size = UDim2.new(0, 117, 0, 32)
+openBasementHatch.Font = Enum.Font.SourceSans
+openBasementHatch.Text = "open Basement Hatch"
+openBasementHatch.TextColor3 = Color3.fromRGB(0, 0, 0)
+openBasementHatch.TextSize = 14.000
+openBasementHatch.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "openBasementHatch"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+Badges.Name = "Badges"
+Badges.Parent = _2ndFrame
+Badges.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Badges.BorderSizePixel = 0
+Badges.Position = UDim2.new(-0.0154034104, 0, 0.433715582, 0)
+Badges.Size = UDim2.new(0, 515, 0, 34)
+Badges.Font = Enum.Font.SourceSans
+Badges.Text = "Badges"
+Badges.TextColor3 = Color3.fromRGB(255, 255, 255)
+Badges.TextSize = 27.000
+
+WoodenPlank.Name = "Wooden Plank"
+WoodenPlank.Parent = _2ndFrame
+WoodenPlank.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+WoodenPlank.BorderSizePixel = 0
+WoodenPlank.Position = UDim2.new(0.0262180828, 0, 0.505587578, 0)
+WoodenPlank.Size = UDim2.new(0, 117, 0, 32)
+WoodenPlank.Font = Enum.Font.SourceSans
+WoodenPlank.Text = "Wooden Plank Badge"
+WoodenPlank.TextColor3 = Color3.fromRGB(0, 0, 0)
+WoodenPlank.TextSize = 14.000
+WoodenPlank.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "addItem",
+		[2] = workspace.debris.Warehouse.Npcs.Bob,
+		[3] = "Wooden Plank"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+CrowBar.Name = "Crow Bar"
+CrowBar.Parent = _2ndFrame
+CrowBar.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+CrowBar.BorderSizePixel = 0
+CrowBar.Position = UDim2.new(0.381374568, 0, 0.382592946, 0)
+CrowBar.Size = UDim2.new(0, 117, 0, 32)
+CrowBar.Font = Enum.Font.SourceSans
+CrowBar.Text = "Crow Bar"
+CrowBar.TextColor3 = Color3.fromRGB(0, 0, 0)
+CrowBar.TextSize = 14.000
+CrowBar.MouseButton1Down:connect(function()
+	local args = {
+		[1] = "giveItem",
+		[2] = "Crowbar"
+	}
+
+	game:GetService("ReplicatedStorage").shared.lib.networkLib.RelayEvent:FireServer(unpack(args))
+
+end)
+
+UI1.Name = "UI 1"
+UI1.Parent = MainFrame
+UI1.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+UI1.BorderSizePixel = 0
+UI1.Position = UDim2.new(0, 0, 0.031152647, 0)
+UI1.Size = UDim2.new(0, 516, 0, 14)
+UI1.Font = Enum.Font.SourceSans
+UI1.Text = ""
+UI1.TextColor3 = Color3.fromRGB(0, 0, 0)
+UI1.TextSize = 14.000
+
+SettingsIcon.MouseButton1Down:connect(function()
+	Settings.Visible = true
+	MainFrame.Visible = false
+end)
+
+SettingsIcon.Name = "Settings Icon"
+SettingsIcon.Parent = MainFrame
+SettingsIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SettingsIcon.BackgroundTransparency = 1.000
+SettingsIcon.Position = UDim2.new(0.0167714357, 0, 0.938330472, 0)
+SettingsIcon.Size = UDim2.new(0, 38, 0, 36)
+SettingsIcon.Image = "http://www.roblox.com/asset/?id=6380067251"
+SettingsIcon.MouseButton1Down:connect(function()
+	Settings.Visible = true
+	MainFrame.Visible = false
+end)
+
+Settings.Name = "Settings"
+Settings.Parent = RobberyStoryv1
+Settings.Active = true
+Settings.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.795107007, 0, 0.160194188, 0)
+Settings.Size = UDim2.new(0, 326, 0, 321)
+Settings.Visible = false
+Settings.Draggable = true
+
+SettingsFrame.Name = "Settings Frame"
+SettingsFrame.Parent = Settings
+SettingsFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+SettingsFrame.BorderSizePixel = 0
+SettingsFrame.Position = UDim2.new(0.0276073627, 0, 0.0311526489, 0)
+SettingsFrame.Size = UDim2.new(0, 309, 0, 301)
+
+SettingsLabel.Name = "Settings Label"
+SettingsLabel.Parent = SettingsFrame
+SettingsLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+SettingsLabel.BorderSizePixel = 0
+SettingsLabel.Position = UDim2.new(-0.0291262139, 0, 0.0431893691, 0)
+SettingsLabel.Size = UDim2.new(0, 326, 0, 34)
+SettingsLabel.Font = Enum.Font.SourceSans
+SettingsLabel.Text = "Settings"
+SettingsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsLabel.TextSize = 27.000
+
+DeleteMenuButton.Name = "Delete Menu Button"
+DeleteMenuButton.Parent = SettingsFrame
+DeleteMenuButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+DeleteMenuButton.BorderSizePixel = 0
+DeleteMenuButton.Position = UDim2.new(0.030123556, 0, 0.816706479, 0)
+DeleteMenuButton.Size = UDim2.new(0, 117, 0, 32)
+DeleteMenuButton.Font = Enum.Font.SourceSans
+DeleteMenuButton.Text = "Delete Menu"
+DeleteMenuButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+DeleteMenuButton.TextSize = 20.000
+DeleteMenuButton.MouseButton1Down:connect(function()
+	game:GetService("CoreGui")["Robbery (Story) v1"]:Destroy()
+end)
+
+TextLabel_2.Parent = SettingsFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.848436952, 0, 0.923588037, 0)
+TextLabel_2.Size = UDim2.new(0, 46, 0, 23)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "v1"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 15.000
+
+asFXgt3gaxfg.Name = "asFXgt3gaxfg"
+asFXgt3gaxfg.Parent = SettingsFrame
+asFXgt3gaxfg.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+asFXgt3gaxfg.BorderSizePixel = 0
+asFXgt3gaxfg.Position = UDim2.new(0.0291262139, 0, 0.196013287, 0)
+asFXgt3gaxfg.Size = UDim2.new(0, 281, 0, 34)
+asFXgt3gaxfg.Font = Enum.Font.SourceSans
+asFXgt3gaxfg.Text = "UI By Mrgunz#2289"
+asFXgt3gaxfg.TextColor3 = Color3.fromRGB(255, 255, 255)
+asFXgt3gaxfg.TextSize = 15.000
+
+asFXgt3gaxfg_2.Name = "asFXgt3gaxfg"
+asFXgt3gaxfg_2.Parent = SettingsFrame
+asFXgt3gaxfg_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+asFXgt3gaxfg_2.BorderSizePixel = 0
+asFXgt3gaxfg_2.Position = UDim2.new(0.0291262139, 0, 0.308970094, 0)
+asFXgt3gaxfg_2.Size = UDim2.new(0, 281, 0, 34)
+asFXgt3gaxfg_2.Font = Enum.Font.SourceSans
+asFXgt3gaxfg_2.Text = "Scripts By Mrgunz#2289"
+asFXgt3gaxfg_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+asFXgt3gaxfg_2.TextSize = 15.000
+
+PHideShow.Name = "P Hide/Show"
+PHideShow.Parent = SettingsFrame
+PHideShow.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+PHideShow.BorderSizePixel = 0
+PHideShow.Position = UDim2.new(0.517799318, 0, 0.833887041, 0)
+PHideShow.Size = UDim2.new(0, 117, 0, 20)
+PHideShow.Font = Enum.Font.SourceSans
+PHideShow.Text = "P Hide/Show"
+PHideShow.TextColor3 = Color3.fromRGB(255, 255, 255)
+PHideShow.TextSize = 15.000
+
+UI2.Name = "UI 2"
+UI2.Parent = Settings
+UI2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+UI2.BorderSizePixel = 0
+UI2.Position = UDim2.new(-0.00151885115, 0, 0.0290827267, 0)
+UI2.Size = UDim2.new(0, 326, 0, 14)
+UI2.Font = Enum.Font.SourceSans
+UI2.Text = ""
+UI2.TextColor3 = Color3.fromRGB(0, 0, 0)
+UI2.TextSize = 14.000
+
+CloseSettings.Name = "Close Settings"
+CloseSettings.Parent = Settings
+CloseSettings.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CloseSettings.BorderSizePixel = 0
+CloseSettings.Position = UDim2.new(0.91724807, 0, 0, 0)
+CloseSettings.Size = UDim2.new(0, 26, 0, 30)
+CloseSettings.Font = Enum.Font.SourceSans
+CloseSettings.Text = "X"
+CloseSettings.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseSettings.TextSize = 28.000
+CloseSettings.MouseButton1Down:connect(function()
+	Settings.Visible = false
+	MainFrame.Visible = true
+end)
