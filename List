@@ -1,0 +1,5 @@
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+    if v.UserId == 1 then ---- UserName ----
+       game.Players.LocalPlayer:Kick("By MrgunzYT")
+    end
+end
