@@ -4036,7 +4036,7 @@ SilentAim.TextColor3 = Color3.fromRGB(0, 0, 0)
 SilentAim.TextSize = 14.000
 SilentAim.MouseButton1Down:connect(function()
 	game.StarterGui:SetCore("SendNotification", {
-		Title = "Robber Menu";
+		Title = "";
 		Text = "Whitelist On.";
 		Duration = 3;
 	})
