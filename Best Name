@@ -22,6 +22,7 @@ Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Frame.Position = UDim2.new(0.401162773, 0, 0.760895133, 0)
 Frame.Size = UDim2.new(0, 316, 0, 133)
 Frame.ZIndex = 4
+Frame.Draggable = true
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 TextButton.BorderSizePixel = 0
