@@ -330,7 +330,7 @@ do
 		end
 	end
 	game:GetService("UserInputService").InputBegan:connect(function(input, gameProcessed)
-		if input.KeyCode == Enum.KeyCode.KeypadOne then
+		if input.KeyCode == Enum.KeyCode.L then
 			if not gameProcessed then
 				age1.Enabled = not age1.Enabled
 			end
