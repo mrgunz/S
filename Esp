@@ -278,7 +278,6 @@ function addEsp(player)
 				end
 			end
 			if not (game:GetService"Players":FindFirstChild(player.Name)) then
-				print(player.Name.." has left. Clearing esp.")
 				espf:FindFirstChild(player.Name):Destroy()
 				coroutine.yield()
 			end
