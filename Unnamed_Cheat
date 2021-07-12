@@ -1097,16 +1097,22 @@ MrgunzYTUnnamed.InfAmmoToggleButton.Size = UDim2.new(0, 202, 0, 19)
 MrgunzYTUnnamed.InfAmmoToggleButton.ZIndex = 2
 MrgunzYTUnnamed.InfAmmoToggleButton.AutoButtonColor = false
 MrgunzYTUnnamed.InfAmmoToggleButton.Font = Enum.Font.SourceSans
-MrgunzYTUnnamed.InfAmmoToggleButton.Text = ""
+MrgunzYTUnnamed.InfAmmoToggleButton.Text = "Inf Ammo ( F )"
 MrgunzYTUnnamed.InfAmmoToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 MrgunzYTUnnamed.InfAmmoToggleButton.TextSize = 14.000
 MrgunzYTUnnamed.InfAmmoToggleButton.TextXAlignment = Enum.TextXAlignment.Right
 MrgunzYTUnnamed.InfAmmoToggleButton.MouseButton1Down:connect(function()
-	for i,v in pairs(game.Workspace:GetDescendants()) do
-		if v.Name == "Ammo" then
-			v.Value = 99999
+	local uis = game:GetService("UserInputService")
+	local plr = game:GetService("Players").LocalPlayer
+	uis.InputBegan:Connect(function(input)
+		if input.KeyCode == Enum.KeyCode.F then
+			for i,v in pairs(game.Workspace:GetDescendants()) do
+				if v.Name == "Ammo" then
+					v.Value = 99999
+				end
+			end
 		end
-	end
+	end)
 end)
 
 MrgunzYTUnnamed.InfAmmoToggleLabel.Name = "Inf Ammo Toggle Label"
